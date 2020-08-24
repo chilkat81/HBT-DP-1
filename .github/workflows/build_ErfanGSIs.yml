@@ -12,8 +12,8 @@ env:
   ROM_NAME: Pixel
   ZIP_NAME: Pixel-Helios
   TZ: Middle-East/Kuwait
-  MIR_NAME1: gof
-  MIR_NAME2: wss
+  MIR_NAME1: cow
+  MIR_NAME2: wet
 
 jobs:
   build:
