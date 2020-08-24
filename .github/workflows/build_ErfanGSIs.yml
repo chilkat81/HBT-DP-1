@@ -13,7 +13,7 @@ env:
   ZIP_NAME: Pixel-Helios
   TZ: Middle-East/Kuwait
   MIR_NAME1: gof
-  MIR_NAME2: wet
+  MIR_NAME2: wss
 
 jobs:
   build:
