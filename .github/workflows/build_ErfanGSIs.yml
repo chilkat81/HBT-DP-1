@@ -12,7 +12,6 @@ env:
   ROM_NAME: Pixel
   ZIP_NAME: Pixel-Helios
   TZ: Middle-East/Kuwait
-  MIR_NAME1: cow
   MIR_NAME2: wet
 
 jobs:
@@ -66,10 +65,7 @@ jobs:
        - name: uploading Aonly.zip
          run: |    
               curl -sL https://git.io/file-transfer | sh
-              ./transfer $MIR_NAME1 ErfanGSIs/out/$ZIP_NAME-GSI-Aonly.7z 
-      
-       - name: uploading aonly to another mirror 
-         run: ./transfer $MIR_NAME2 ErfanGSIs/out/$ZIP_NAME-GSI-Aonly.7z      
+              ./transfer $MIR_NAME2 ErfanGSIs/out/$ZIP_NAME-GSI-Aonly.7z       
                        
        - name: Zipping AB
          run: |
@@ -77,10 +73,8 @@ jobs:
               
        - name: uploading AB.zip
          run: |
-              ./transfer $MIR_NAME1 ErfanGSIs/out/$ZIP_NAME-GSI-AB.7z   
+              ./transfer $MIR_NAME2 ErfanGSIs/out/$ZIP_NAME-GSI-AB.7z   
             
-       - name: uploading AB to another mirror 
-         run: ./transfer $MIR_NAME2 ErfanGSIs/out/$ZIP_NAME-GSI-AB.7z   
               
        - name: Upload Build Informations and Baked:)
          run: |
