@@ -8,7 +8,7 @@ on:
       types: [started]
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/rvc/images/factory/bonito-rpb3.200720.005-factory-86b7230a.zip
+  ROM_URL: https://dl.google.com/developers/android/rvc/images/factory/sunfish-rpb3.200720.005-factory-0c21828c.zip  
   ROM_NAME: Pixel
   ZIP_NAME: Pixel-Helios
   TZ: Middle-East/Kuwait
@@ -48,7 +48,7 @@ jobs:
       
      
        - name: using dynamic.sh 
-         run: cd ErfanGSIs && sudo ./md.sh Pixel bonito-rpb3.200720.005-factory-86b7230a.zip
+         run: cd ErfanGSIs && sudo ./md.sh Pixel sunfish-rpb3.200720.005-factory-0c21828c.zip       
        - name: mounting the system.img
          run: cd ErfanGSIs/cache && sudo mkdir oos && sudo mount system.img oos
        
