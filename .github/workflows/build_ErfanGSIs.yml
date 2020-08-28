@@ -8,9 +8,9 @@ on:
       types: [started]
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/rvc/images/factory/sunfish-rpb3.200720.005-factory-0c21828c.zip  
-  ROM_NAME: Pixel
-  ZIP_NAME: Pixel-Helios
+  ROM_URL: http://otafsg1.h2os.com/patch/amazone2/GLO/NordOxygen/NordOxygen_14.I.07_GLO_007_2008180229/NordOxygen_14_OTA_007_all_2008180229_6978e71.zip 
+  ROM_NAME: OxygenOS
+  ZIP_NAME: OxygenOS-Helios
   TZ: Middle-East/Kuwait
   MIR_NAME2: wet
 
@@ -48,7 +48,7 @@ jobs:
       
      
        - name: using dynamic.sh 
-         run: cd ErfanGSIs && sudo ./md.sh Pixel sunfish-rpb3.200720.005-factory-0c21828c.zip       
+         run: cd ErfanGSIs && sudo ./md.sh OxygenOS NordOxygen_14_OTA_007_all_2008180229_6978e71.zip       
        - name: mounting the system.img
          run: cd ErfanGSIs/cache && sudo mkdir oos && sudo mount system.img oos
        
