@@ -8,9 +8,9 @@ on:
       types: [started]
     
 env:
-  ROM_URL: http://download.h2os.com/OnePlus8Pro/MP/OnePlus8ProHydrogen_15.H.22_OTA_022_all_2008080047_69fc62d12bff4c00.zip
-  ROM_NAME: OxygenOS:HydrogenOS
-  ZIP_NAME: HydrogenOS-Helios
+  ROM_URL: https://oxygenos.oneplus.net/OnePlus8Oxygen_15.I.19_OTA_019_all_2007160040_downgrade_44ff527388f24f3c.zip
+  ROM_NAME: OxygenOS
+  ZIP_NAME: OxygenOS-Helios
   TZ: Middle-East/Kuwait
   MIR_NAME2: wet
 
