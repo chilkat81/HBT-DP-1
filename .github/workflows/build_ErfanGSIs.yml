@@ -8,7 +8,7 @@ on:
       types: [started]
     
 env:
-  ROM_URL: https://oxygenos.oneplus.net/OnePlus8Oxygen_15.I.19_OTA_019_all_2007160040_downgrade_44ff527388f24f3c.zip
+  ROM_URL: https://oxygenos.oneplus.net/NordOxygen_14_OTA_007_all_2008180229_699831cac3b5483c.zip
   ROM_NAME: OxygenOS
   ZIP_NAME: OxygenOS-Helios
   TZ: Middle-East/Kuwait
