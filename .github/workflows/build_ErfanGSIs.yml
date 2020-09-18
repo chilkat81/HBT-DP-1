@@ -8,7 +8,7 @@ on:
       types: [started]
     
 env:
-  ROM_URL: https://oxygenos.oneplus.net/OnePlus8VisibleOxygen_15_OTA_004_all_2007221646_557f4bb3dbf247cd.zip
+  ROM_URL: https://tdrive.manofuranium.workers.dev/OnePlus8Oxygen_15.I.12_OTA_012_all_2004111447_b1b24.zip
   ROM_NAME: OxygenOS
   ZIP_NAME: OxygenOS-Helios
   TZ: Middle-East/Kuwait
@@ -48,7 +48,7 @@ jobs:
       
      
        - name: using dynamic.sh 
-         run: cd ErfanGSIs && sudo ./dyn.sh OxygenOS OnePlus8VisibleOxygen_15_OTA_004_all_2007221646_557f4bb3dbf247cd.zip 
+         run: cd ErfanGSIs && sudo ./dyn.sh OxygenOS OnePlus8Oxygen_15.I.12_OTA_012_all_2004111447_b1b24.zip 
        - name: mounting the system.img
          run: cd ErfanGSIs/cache && sudo mkdir oos && sudo mount system.img oos
        
