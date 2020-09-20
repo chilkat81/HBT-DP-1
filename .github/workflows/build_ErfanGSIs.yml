@@ -8,9 +8,9 @@ on:
       types: [started]
     
 env:
-  ROM_URL: https://tdrive.manofuranium.workers.dev/OnePlus8Oxygen_15.I.12_OTA_012_all_2004111447_b1b24.zip
-  ROM_NAME: OxygenOS
-  ZIP_NAME: OxygenOS-Helios
+  ROM_URL: https://dl.google.com/dl/android/aosp/coral-rp1a.200720.009-factory-dac149ce.zip
+  ROM_NAME: Pixel
+  ZIP_NAME: Pixel-Helios
   TZ: Middle-East/Kuwait
   MIR_NAME2: wet
 
