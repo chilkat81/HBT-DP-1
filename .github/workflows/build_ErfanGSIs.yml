@@ -48,7 +48,7 @@ jobs:
       
      
        - name: using dynamic.sh 
-         run: cd ErfanGSIs && sudo ./dyn11.sh OxygenOS sunfish-rp1a.200720.011-factory-1a38c5a6.zip
+         run: cd ErfanGSIs && sudo ./dyn11.sh Pixel sunfish-rp1a.200720.011-factory-1a38c5a6.zip
          
        - name: mounting the system.img
          run: cd ErfanGSIs/cache && sudo mkdir oos && sudo mount system.img oos
