@@ -48,7 +48,7 @@ jobs:
       
      
        - name: using dynamic.sh 
-         run: cd ErfanGSIs && sudo ./NUBIADP.sh NX651J-update.zip
+         run: cd ErfanGSIs && sudo ./NUBIADP.sh Nubia NX651J-update.zip
          
        - name: mounting the system.img
          run: cd ErfanGSIs/cache && sudo mkdir oos && sudo mount system.img oos
