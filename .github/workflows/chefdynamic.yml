@@ -30,9 +30,11 @@ jobs:
          run: |
             sudo -E apt-get -qq update
             sudo -E apt-get -qq install git openjdk-8-jdk wget
-            sudo -E apt-get -qq install python3
+            sudo -E apt-get -qq install python-dev
+            sudo -E apt-get -qq install python
             sudo -E apt-get -qq install simg2img
             sudo -E apt-get -qq install python-protobuf
+            python3 --version
             sudo apt-get install -y expect
             git clone --recurse-submodules https://github.com/issacabraham-git/ErfanGSIs.git
             sudo chmod -R 777 ErfanGSIs
