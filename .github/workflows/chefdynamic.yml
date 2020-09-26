@@ -1,0 +1,98 @@
+name: Time to Bake...
+
+on: 
+  #releasepush:
+    #pushbuild
+
+  watch: 
+      types: [started]
+    
+env:
+  ROM_URL: https://tdrive.elytra8.workers.dev/NX651J-update.zip
+  ROM_NAME: Nubia
+  ZIP_NAME: NUBIA-HELIOS
+  SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
+  TZ: Middle-East/Kuwait
+  SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
+  SFDIRA2: cd /home/pfs/project/helios-gsis/HeliosBakerybills
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+
+    steps:
+       - name: Checkout
+         uses: actions/checkout@main
+       
+           
+       - name: Setting up the SPICES and its SPICES
+         run: |
+            sudo -E apt-get -qq update
+            sudo -E apt-get -qq install git openjdk-8-jdk wget
+            sudo -E apt-get -qq install python3
+            sudo -E apt-get -qq install simg2img
+            sudo -E apt-get -qq install python-protobuf
+            sudo apt-get install -y expect
+            git clone --recurse-submodules https://github.com/issacabraham-git/ErfanGSIs.git
+            sudo chmod -R 777 ErfanGSIs
+            cd ErfanGSIs
+            sudo bash setup.sh
+            sudo wget $ROM_URL -P ErfanGSIs
+            
+       - name: FILLING THE CREAM{DYNAMIC MAGIC}
+         run: |
+              cd ErfanGSIs && sudo ./NUBIADP.sh Nubia NX651J-update.zip
+              cd ErfanGSIs/cache && sudo mkdir oos && sudo mount system.img oos
+              sudo ./ErfanGSIs/make.sh ErfanGSIs/cache/oos $ROM_NAME AB && sudo ./ErfanGSIs/make.sh ErfanGSIs/cache/oos $ROM_NAME Aonly
+       
+       - name: Zipping BOTH COOKIES
+         run: |
+              mkdir final
+              sudo chmod -R 777 ErfanGSIs/output
+              zip -r ErfanGSIs/out/$ZIP_NAME-GSI-Aonly.7z ErfanGSIs/out/*-Aonly-*.img 
+              zip -r ErfanGSIs/out/$ZIP_NAME-GSI-AB.7z ErfanGSIs/out/*-AB-*.img
+              
+          
+       - name: uploading to HELIOSBAKERY
+         run: |   
+              cd ErfanGSIs/output
+              expect -c " 
+              spawn sftp ridhin@frs.sourceforge.net
+              expect \"yes/no\"
+              send \"yes\r\"
+              expect \"Password\"        
+              send \"${{ secrets.SFGPASS }}\r\"
+              expect \"sftp> \"
+              send \"$SFDIRA1\r\"
+              set timeout -1
+              send \"put $ZIP_NAME-GSI-Aonly.7z\r\"
+              expect \"Uploading\"
+              expect \"100%\"
+              expect \"sftp>\"
+              interact"
+              expect -c "
+              spawn sftp ridhin@frs.sourceforge.net
+              expect \"Password\"
+              send \"${{ secrets.SFGPASS }}\r\"
+              expect \"sftp> \"
+              send \"$SFDIRA1\r\"
+              set timeout -1
+              send \"put $ZIP_NAME-GSI-AB.7z\r\"
+              expect \"Uploading\"
+              expect \"100%\"
+              expect \"sftp>\"
+              interact"
+              expect -c "
+              spawn sftp ridhin@frs.sourceforge.net
+              expect \"Password\"
+              send \"${{ secrets.SFGPASS }}\r\"
+              expect \"sftp> \"
+              send \"$SFDIRA2\r\"
+              set timeout -1
+              send \"put $ZIP_NAME-GSI-Aonly.txt\r\"
+              expect \"Uploading\"
+              expect \"100%\"
+              expect \"sftp>\"
+              send \"bye\r\"
+              interact"          
