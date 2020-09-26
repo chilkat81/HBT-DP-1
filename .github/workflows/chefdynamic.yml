@@ -42,7 +42,7 @@ jobs:
             
        - name: FILLING THE CREAM{DYNAMIC MAGIC}
          run: |
-              cd ErfanGSIs && sudo ./PIXELDP.sh Pixel bonito-rp1a.200720.009-factory-2a8679c5.zip
+              cd ErfanGSIs && sudo ./dyn11.sh Pixel bonito-rp1a.200720.009-factory-2a8679c5.zip
               cd ErfanGSIs/cache && sudo mkdir oos && sudo mount system.img oos
               sudo ./ErfanGSIs/make.sh ErfanGSIs/cache/oos $ROM_NAME AB && sudo ./ErfanGSIs/make.sh ErfanGSIs/cache/oos $ROM_NAME Aonly
        
