@@ -1,14 +1,4 @@
-## Using Erfan's Tools
-
-
-Without Erfan's Scripts all this would be not possible . This tool uses the help from GitHub Actions and Erfan's tool to complete the builds . 
-
-with the help of this tool we will be able to build GSIs much more quickly to meet the users requiremnets. 
-
-
-## Thanks to
-
-* @JamieHoSzeYui for all the motivation :)
-* @erfanoabdi for your GSIs Tool
-* @Together08 for the base
-
+𝙃𝙚𝙡𝙞𝙤𝙨𝘽𝙖𝙠𝙚𝙧𝘿𝙮𝙣𝙖𝙢𝙞𝙘
+This Project should not be shared with others. 
+This is a *private* repo . 
+those have given access can **Bake**
