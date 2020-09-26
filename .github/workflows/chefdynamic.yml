@@ -34,22 +34,26 @@ jobs:
             sudo -E apt-get -qq install python
             sudo -E apt-get -qq install simg2img
             sudo -E apt-get -qq install python-protobuf
-            python3 --version
             sudo apt-get install -y expect
-            git clone --recurse-submodules https://github.com/issacabraham-git/ErfanGSIs.git
-            sudo chmod -R 777 ErfanGSIs
-            cd ErfanGSIs
-            sudo bash setup.sh
-            sudo wget $ROM_URL -P ErfanGSIs
+            python3 --version
+            
+       - name: SOME SCRIPT WORKS 
+         run: git clone --recurse-submodules https://github.com/issacabraham-git/ErfanGSIs.git
+            
+       - name: SETTING UP THE MACHINES
+         run: sudo chmod -R 777 ErfanGSIs
+              cd ErfanGSIs
+              sudo bash setup.sh
+              sudo wget $ROM_URL -P ErfanGSIs
             
        - name: FILLING THE CREAM{DYNAMIC MAGIC}
          run: |
               cd ErfanGSIs && sudo ./dyn11.sh Pixel bonito-rp1a.200720.009-factory-2a8679c5.zip
               
-       - name: adsd
+       - name: MOUNTUPTHEIMAGE
          run: cd ErfanGSIs/cache && sudo mkdir oos && sudo mount system.img oos      
          
-       - name: make
+       - name: FILLING THE CREAM
          run:     
             |
             sudo ./ErfanGSIs/make.sh ErfanGSIs/cache/oos $ROM_NAME AB && sudo ./ErfanGSIs/make.sh ErfanGSIs/cache/oos $ROM_NAME Aonly
