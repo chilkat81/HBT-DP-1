@@ -8,9 +8,9 @@ on:
       types: [started]
     
 env:
-  ROM_URL: https://dl.google.com/dl/android/aosp/sunfish-rp1a.200720.011-factory-1a38c5a6.zip
-  ROM_NAME: Pixel
-  ZIP_NAME: Pixel-HELIOS
+  ROM_URL: https://tdrive.elytra8.workers.dev/NX651J-update.zip
+  ROM_NAME: Nubia
+  ZIP_NAME: Nubia-HELIOS
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
@@ -44,7 +44,7 @@ jobs:
        - name: GENERATION OF BAKED GOODIES
          run: 
             |
-            cd ErfanGSIs && sudo ./dyn11.sh $ROM_NAME sunfish-rp1a.200720.011-factory-1a38c5a6.zip && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./NUBIADP.sh $ROM_NAME sunfish-rp1a.200720.011-factory-1a38c5a6.zip && sudo umount system && sudo rm -rf system
             
        - name: MOUNTING THE SYSTEM
          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
