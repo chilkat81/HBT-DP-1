@@ -8,9 +8,9 @@ on:
       types: [started]
     
 env:
-  ROM_URL: https://netix.dl.sourceforge.net/project/havoc-os/X00T/Havoc-OS-v3.9-20200916-X00T-Official.zip
-  ROM_NAME: Generic:Havoc
-  ZIP_NAME: Havoc-HELIOS
+  ROM_URL: https://dl.google.com/dl/android/aosp/sunfish-rp1a.200720.011-factory-1a38c5a6.zip
+  ROM_NAME: Pixel
+  ZIP_NAME: Pixel-HELIOS
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
@@ -37,11 +37,20 @@ jobs:
             sudo chmod -R 777 ErfanGSIs
             cd ErfanGSIs
             sudo bash setup.sh
+        
+       - name: DOWNLOADING THE FIRMWARE
+         run: cd ErfanGSIs && sudo wget $ROM_URL 
        
        - name: GENERATION OF BAKED GOODIES
          run: 
             |
-            cd ErfanGSIs && sudo ./gsi.sh $ROM_URL $ROM_NAME
+            cd ErfanGSIs && sudo ./dyn11.sh $ROM_NAME sunfish-rp1a.200720.011-factory-1a38c5a6.zip
+            
+       - name: MOUNTING THE SYSTEM
+         run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
+         
+       - name: MAKING THE COOKIES
+         run: cd ErfanGSIs && sudo ./gsi.sh cache/dynamic $ROM_NAME  
        
        - name: Zipping BOTH COOKIES
          run: |
