@@ -8,13 +8,13 @@ on:
       types: [started]
     
 env:
-  ROM_URL: https://dl.google.com/dl/android/aosp/bonito-rp1a.200720.009-factory-2a8679c5.zip
-  ROM_NAME: Pixel
-  ZIP_NAME: PIXEL-HELIOS
+  ROM_URL: https://netix.dl.sourceforge.net/project/havoc-os/X00T/Havoc-OS-v3.9-20200916-X00T-Official.zip
+  ROM_NAME: Generic:Havoc
+  ZIP_NAME: Havoc-HELIOS
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
-  SFDIRA2: cd /home/pfs/project/helios-gsis/HeliosBakerybills
+  SFDIRA2: cd /home/pfs/project/helios-gsis/Heliosbakerybills
   
 jobs:
   build:
@@ -30,47 +30,29 @@ jobs:
          run: |
             sudo -E apt-get -qq update
             sudo -E apt-get -qq install git openjdk-8-jdk wget
-            sudo -E apt-get -qq install python-dev
-            sudo -E apt-get -qq install python
+            sudo -E apt-get -qq install python3
             sudo -E apt-get -qq install simg2img
-            sudo -E apt-get -qq install python-protobuf
             sudo apt-get install -y expect
-            python3 --version
-            
-       - name: SOME SCRIPT WORKS 
-         run: git clone --recurse-submodules https://github.com/issacabraham-git/ErfanGSIs.git
-            
-       - name: SETTING UP THE MACHINES
-         run: sudo chmod -R 777 ErfanGSIs
-              cd ErfanGSIs
-              sudo bash setup.sh
-         
-       - name: Downloading the FW  
-              sudo wget $ROM_URL -P ErfanGSIs
-            
-       - name: FILLING THE CREAM{DYNAMIC MAGIC}
-         run: |
-              cd ErfanGSIs && sudo ./dyn11.sh Pixel bonito-rp1a.200720.009-factory-2a8679c5.zip
-              
-       - name: MOUNTUPTHEIMAGE
-         run: cd ErfanGSIs/cache && sudo mkdir oos && sudo mount system.img oos      
-         
-       - name: FILLING THE CREAM
-         run:     
+            git clone --recurse-submodules https://github.com/issacabraham-git/ErfanGSIs.git
+            sudo chmod -R 777 ErfanGSIs
+            cd ErfanGSIs
+            sudo bash setup.sh
+       
+       - name: GENERATION OF BAKED GOODIES
+         run: 
             |
-            sudo ./ErfanGSIs/make.sh ErfanGSIs/cache/oos $ROM_NAME AB && sudo ./ErfanGSIs/make.sh ErfanGSIs/cache/oos $ROM_NAME Aonly
+            cd ErfanGSIs && sudo ./gsi.sh $ROM_URL $ROM_NAME
        
        - name: Zipping BOTH COOKIES
          run: |
               mkdir final
               sudo chmod -R 777 ErfanGSIs/output
-              zip -r ErfanGSIs/out/$ZIP_NAME-GSI-Aonly.7z ErfanGSIs/out/*-Aonly-*.img 
-              zip -r ErfanGSIs/out/$ZIP_NAME-GSI-AB.7z ErfanGSIs/out/*-AB-*.img
+              zip -r ErfanGSIs/output/$ZIP_NAME-GSI-Aonly.7z ErfanGSIs/output/*-Aonly-*.img 
+              zip -r ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z ErfanGSIs/output/*-AB-*.img
               
-          
        - name: uploading to HELIOSBAKERY
          run: |   
-              cd ErfanGSIs/out
+              cd ErfanGSIs/output
               expect -c " 
               spawn sftp ridhin@frs.sourceforge.net
               expect \"yes/no\"
@@ -110,3 +92,4 @@ jobs:
               expect \"sftp>\"
               send \"bye\r\"
               interact"  
+                             
