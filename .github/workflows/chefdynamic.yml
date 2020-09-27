@@ -44,6 +44,8 @@ jobs:
          run: sudo chmod -R 777 ErfanGSIs
               cd ErfanGSIs
               sudo bash setup.sh
+         
+       - name: Downloading the FW  
               sudo wget $ROM_URL -P ErfanGSIs
             
        - name: FILLING THE CREAM{DYNAMIC MAGIC}
