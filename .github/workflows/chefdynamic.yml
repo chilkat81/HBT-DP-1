@@ -8,9 +8,9 @@ on:
       types: [started]
     
 env:
-  ROM_URL: https://tdrive.elytra8.workers.dev/NX651J-update.zip
-  ROM_NAME: Nubia
-  ZIP_NAME: Nubia-HELIOS
+  ROM_URL: https://oxygenos.oneplus.net/OnePlus7TOxygen_13.W.08_OTA_008_all_2009072104_5a77f7db9358487c.zip
+  ROM_NAME: OxygenOS
+  ZIP_NAME: OxygenOS-HELIOS
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
@@ -44,7 +44,7 @@ jobs:
        - name: GENERATION OF BAKED GOODIES
          run: 
             |
-            cd ErfanGSIs && sudo ./NUBIADP.sh $ROM_NAME NX651J-update.zip && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./NUBIADP.sh $ROM_NAME OnePlus7TOxygen_13.W.08_OTA_008_all_2009072104_5a77f7db9358487c.zip && sudo umount system && sudo rm -rf system
             
        - name: MOUNTING THE SYSTEM
          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
