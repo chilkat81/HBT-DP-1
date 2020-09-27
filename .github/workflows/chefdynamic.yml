@@ -8,7 +8,7 @@ on:
       types: [started]
     
 env:
-  ROM_URL: https://oxygenos.oneplus.net/OnePlus7TOxygen_13.W.08_OTA_008_all_2009072104_5a77f7db9358487c.zip
+  ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/OnePlus7ProOxygen/OnePlus7ProOxygen_13.W.43_GLO_043_2009072044/OnePlus7ProOxygen_13.W.43_OTA_043_all_2009072044_d53d.zip
   ROM_NAME: OxygenOS
   ZIP_NAME: OxygenOS-HELIOS
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
@@ -44,7 +44,7 @@ jobs:
        - name: GENERATION OF BAKED GOODIES
          run: 
             |
-            cd ErfanGSIs && sudo ./NUBIADP.sh $ROM_NAME OnePlus7TOxygen_13.W.08_OTA_008_all_2009072104_5a77f7db9358487c.zip && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./dyn.sh $ROM_NAME OnePlus7ProOxygen_13.W.43_OTA_043_all_2009072044_d53d.zip && sudo umount system && sudo rm -rf system
             
        - name: MOUNTING THE SYSTEM
          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
