@@ -44,7 +44,7 @@ jobs:
        - name: GENERATION OF BAKED GOODIES
          run: 
             |
-            cd ErfanGSIs && sudo ./NUBIADP.sh $ROM_NAME 12198da2140b32aa979058845de3c41f4be9e730.zip && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./NUBIA-VOSDP.sh $ROM_NAME 12198da2140b32aa979058845de3c41f4be9e730.zip && sudo umount system && sudo rm -rf system
             
        - name: MOUNTING THE SYSTEM
          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
