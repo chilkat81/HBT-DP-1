@@ -9,7 +9,7 @@ on:
     
 env:
   ROM_URL: https://netix.dl.sourceforge.net/project/xiaomi-eu-multilang-miui-roms/xiaomi.eu/MIUI-WEEKLY-RELEASES/20.9.24/xiaomi.eu_multi_MI10_20.9.24_v12-11.zip
-  ROM_NAME: MIUI:MIUIEU10R
+  ROM_NAME: MIUI
   ZIP_NAME: MIUIR10-HELIOS
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
