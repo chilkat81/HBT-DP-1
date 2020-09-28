@@ -8,9 +8,9 @@ on:
       types: [started]
     
 env:
-  ROM_URL: http://tdrive.elytra8.workers.dev/12198da2140b32aa979058845de3c41f4be9e730.zip
-  ROM_NAME: VOS
-  ZIP_NAME: VOS-HELIOS
+  ROM_URL: https://netix.dl.sourceforge.net/project/xiaomi-eu-multilang-miui-roms/xiaomi.eu/MIUI-WEEKLY-RELEASES/20.9.24/xiaomi.eu_multi_MI10Ultra_20.9.24_v12-10.zip
+  ROM_NAME: MIUI
+  ZIP_NAME: MIUI-HELIOS
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
@@ -44,7 +44,7 @@ jobs:
        - name: GENERATION OF BAKED GOODIES
          run: 
             |
-            cd ErfanGSIs && sudo ./NUBIA-VOSDP.sh $ROM_NAME 12198da2140b32aa979058845de3c41f4be9e730.zip && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./NUBIA-VOS-MIUIDP.sh $ROM_NAME xiaomi.eu_multi_MI10Ultra_20.9.24_v12-10.zip && sudo umount system && sudo rm -rf system
             
        - name: MOUNTING THE SYSTEM
          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
