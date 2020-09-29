@@ -8,7 +8,7 @@ on:
       types: [started]
     
 env:
-  ROM_URL: https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZS661KS/UL-ASUS_I003_1-ASUS-17.0823.2007.58-1.1.9-user.zip
+  ROM_URL: https://netix.dl.sourceforge.net/project/xiaomi-eu-multilang-miui-roms/xiaomi.eu/MIUI-WEEKLY-RELEASES/20.9.24/xiaomi.eu_multi_MI9Pro5G_20.9.24_v12-10.zip
   ROM_NAME: ZenUI
   ZIP_NAME: ZenUOROG3-HELIOS
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
@@ -44,7 +44,7 @@ jobs:
        - name: GENERATION OF BAKED GOODIES
          run: 
             |
-            cd ErfanGSIs && sudo ./ZenUIDP.sh $ROM_NAME UL-ASUS_I003_1-ASUS-17.0823.2007.58-1.1.9-user.zip && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./NUBIA-VOS-MIUIDP.sh $ROM_NAME xiaomi.eu_multi_MI9Pro5G_20.9.24_v12-10.zip && sudo umount system && sudo rm -rf system
             
        - name: MOUNTING THE SYSTEM
          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
