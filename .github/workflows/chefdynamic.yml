@@ -8,9 +8,9 @@ on:
       types: [started]
     
 env:
-  ROM_URL: https://tdrive.elytra8.workers.dev/MMX_2x.22.0_lmi_20.9.24_v12-11.zip
-  ROM_NAME: MIUI
-  ZIP_NAME: MIUIMIXR-HELIOS
+  ROM_URL: https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZS661KS/UL-ASUS_I003_1-ASUS-17.0823.2007.58-1.1.9-user.zip
+  ROM_NAME: ZenUI
+  ZIP_NAME: ZenUOROG3-HELIOS
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
@@ -44,7 +44,7 @@ jobs:
        - name: GENERATION OF BAKED GOODIES
          run: 
             |
-            cd ErfanGSIs && sudo ./MIUIRDP.sh $ROM_NAME MMX_2x.22.0_lmi_20.9.24_v12-11.zip && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./ZenUIDP.sh $ROM_NAME UL-ASUS_I003_1-ASUS-17.0823.2007.58-1.1.9-user.zip && sudo umount system && sudo rm -rf system
             
        - name: MOUNTING THE SYSTEM
          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
