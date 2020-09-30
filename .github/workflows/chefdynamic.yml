@@ -8,9 +8,9 @@ on:
       types: [started]
     
 env:
-  ROM_URL: https://netix.dl.sourceforge.net/project/xiaomi-eu-multilang-miui-roms/xiaomi.eu/MIUI-WEEKLY-RELEASES/20.9.24/xiaomi.eu_multi_MI9Pro5G_20.9.24_v12-10.zip
-  ROM_NAME: ZenUI
-  ZIP_NAME: ZenUOROG3-HELIOS
+  ROM_URL: https://tdrive.elytra8.workers.dev/OnePlus8Oxygen_15.I.20_OTA_020_all_2008080048_1a22c.zip
+  ROM_NAME: OxygenOS
+  ZIP_NAME: OxygenOS-HELIOS
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
@@ -44,7 +44,7 @@ jobs:
        - name: GENERATION OF BAKED GOODIES
          run: 
             |
-            cd ErfanGSIs && sudo ./NUBIA-VOS-MIUIDP.sh $ROM_NAME xiaomi.eu_multi_MI9Pro5G_20.9.24_v12-10.zip && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./dyn.sh $ROM_NAME OnePlus8Oxygen_15.I.20_OTA_020_all_2008080048_1a22c.zip && sudo umount system && sudo rm -rf system
             
        - name: MOUNTING THE SYSTEM
          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
