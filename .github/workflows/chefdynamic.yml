@@ -8,9 +8,9 @@ on:
       types: [started]
     
 env:
-  ROM_URL: https://tdrive.elytra8.workers.dev/miui_GAUGUINEEAGlobal_V12.0.1.0.QJSEUXM_218d1735fb_10.0.zip
-  ROM_NAME: MIUI
-  ZIP_NAME: MIUI-HELIOS-03-10
+  ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/OnePlus7TOxygen/OnePlus7TOxygen_14.O.19_GLO_019_2009281709/OnePlus7TOxygen_14.O.19_OTA_019_all_2009281709_1026.zip
+  ROM_NAME: OxygenOS
+  ZIP_NAME: OOSOP7T-HELIOS-04-10
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
@@ -44,7 +44,7 @@ jobs:
        - name: GENERATION OF BAKED GOODIES
          run: 
             |
-            cd ErfanGSIs && sudo ./NUBIA-VOS-MIUIDP.sh $ROM_NAME miui_GAUGUINEEAGlobal_V12.0.1.0.QJSEUXM_218d1735fb_10.0.zip && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./dyn.sh $ROM_NAME OnePlus7TOxygen_14.O.19_OTA_019_all_2009281709_1026.zip && sudo umount system && sudo rm -rf system
             
        - name: MOUNTING THE SYSTEM
          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
