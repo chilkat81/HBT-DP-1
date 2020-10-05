@@ -9,9 +9,11 @@ on:
     
 env:
   ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/OnePlus7TOxygen/OnePlus7TOxygen_14.O.19_GLO_019_2009281709/OnePlus7TOxygen_14.O.19_OTA_019_all_2009281709_1026.zip
+  ROMZIP_NAME: OnePlus7TOxygen_14.O.19_OTA_019_all_2009281709_1026.zip
   ROM_NAME: OxygenOS
   ZIP_NAME: OOSOP7T-HELIOS-04-10
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
+  SECRETS_GITPASS: ${{ secrets.GIT }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
   SFDIRA2: cd /home/pfs/project/helios-gsis/Heliosbakerybills
@@ -33,7 +35,7 @@ jobs:
             sudo -E apt-get -qq install python3
             sudo -E apt-get -qq install simg2img
             sudo apt-get install -y expect
-            git clone --recurse-submodules https://github.com/issacabraham-git/ErfanGSIs.git
+            git clone --recurse-submodules ${{ secrets.GIT }}
             sudo chmod -R 777 ErfanGSIs
             cd ErfanGSIs
             sudo bash setup.sh
@@ -44,7 +46,7 @@ jobs:
        - name: GENERATION OF BAKED GOODIES
          run: 
             |
-            cd ErfanGSIs && sudo ./dyn.sh $ROM_NAME OnePlus7TOxygen_14.O.19_OTA_019_all_2009281709_1026.zip && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./dyn.sh $ROM_NAME $ROMZIP_NAME && sudo umount system && sudo rm -rf system
             
        - name: MOUNTING THE SYSTEM
          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
