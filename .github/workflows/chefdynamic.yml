@@ -8,10 +8,10 @@ on:
       types: [started]
     
 env:
-  ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/NordOxygen/NordOxygen_14.O.10_GLO_010_2009260504/NordOxygen_14.O.10_OTA_010_all_2009260504_113aafee5.zip
-  ROMZIP_NAME: NordOxygen_14.O.10_OTA_010_all_2009260504_113aafee5.zip
-  ROM_NAME: OxygenOS
-  ZIP_NAME: OOSNORD-HELIOS-05-10
+  ROM_URL: https://dl.google.com/dl/android/aosp/sunfish-rp1a.201005.006-factory-d80cc80f.zip
+  ROMZIP_NAME: sunfish-rp1a.201005.006-factory-d80cc80f.zip
+  ROM_NAME: Pixel
+  ZIP_NAME: Pixel4A-HELIOS-05-10
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   SECRETS_GITPASS: ${{ secrets.GIT }}
   TZ: Middle-East/Kuwait
@@ -46,7 +46,7 @@ jobs:
        - name: GENERATION OF BAKED GOODIES
          run: 
             |
-            cd ErfanGSIs && sudo ./dyn.sh $ROM_NAME $ROMZIP_NAME && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./dyn11.sh $ROM_NAME $ROMZIP_NAME && sudo umount system && sudo rm -rf system
             
        - name: MOUNTING THE SYSTEM
          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
