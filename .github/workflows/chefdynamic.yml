@@ -7,7 +7,7 @@ on:
   watch: 
       types: [started]
     
-env:
+env:              #change ROM_URL,ROM_NAME,ZIP_NAME,ROMZIP_NAME respectivley. ROM_NAME is case sensitive 
   ROM_URL: https://dl.google.com/dl/android/aosp/coral-rp1a.201005.004-factory-1eb5827f.zip
   ROMZIP_NAME: coral-rp1a.201005.004-factory-1eb5827f.zip
   ROM_NAME: Pixel
