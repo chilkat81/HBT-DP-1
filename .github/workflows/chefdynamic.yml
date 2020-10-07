@@ -56,7 +56,7 @@ jobs:
        - name: GENERATION OF BAKED GOODIES
          run: 
             |
-            cd ErfanGSIs && sudo ./MIUIRDP.sh $ROM_NAME $ROMZIP_NAME && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./makedynamic.sh $ROM_NAME $ROMZIP_NAME && sudo umount system && sudo rm -rf system
             
        - name: MOUNTING THE SYSTEM
          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
