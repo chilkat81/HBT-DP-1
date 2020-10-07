@@ -37,7 +37,8 @@ jobs:
             sudo apt install expect
             
        - name: test setup 
-         run: |     
+         run: |  
+            expect -c"   
             set timeout -1
             spawn git clone https://github.com/issacabraham-git/HeliosBakerTools.git ErfanGSIs
             expect "Username\r"
