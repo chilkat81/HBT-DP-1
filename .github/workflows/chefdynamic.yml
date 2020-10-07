@@ -51,7 +51,7 @@ jobs:
            sudo chmod -R 777 ErfanGSIs
         
        - name: DOWNLOADING THE FIRMWARE
-         run: cd ErfanGSIs && sudo wget $ROM_URL 
+         run: cd ErfanGSIs && bash setup.sh && sudo wget $ROM_URL 
        
        - name: GENERATION OF BAKED GOODIES
          run: 
