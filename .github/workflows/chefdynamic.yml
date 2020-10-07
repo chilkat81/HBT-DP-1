@@ -39,7 +39,7 @@ jobs:
        - name: ACCESS GITHUB
          run:  |
            expect -c " 
-           spawn git clone ${{ secrets.REPOS }}
+           spawn git clone ${{ secrets.REPOS }} ErfanGSIs
            expect \"Username or email address\"        
            send \"${{ secrets.USERG }}\r\"
            expect \"Password\"        
@@ -49,7 +49,7 @@ jobs:
            interact"
         
        - name: DOWNLOADING THE FIRMWARE
-         run: cd Heliosbakerytool && sudo wget $ROM_URL 
+         run: cd ErfanGSIs && sudo wget $ROM_URL 
        
        - name: GENERATION OF BAKED GOODIES
          run: 
