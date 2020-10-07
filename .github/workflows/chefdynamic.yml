@@ -35,13 +35,16 @@ jobs:
             sudo -E apt-get -qq install python3
             sudo -E apt-get -qq install simg2img
             sudo apt install expect
+            
+       - name: test setup 
+         run: |     
             expect -c " 
-            spawn git clone ${{ secrets.REPO }} source
+            spawn git clone ${{ secrets.REPO }} ErfanGSIs
             expect \"Username\"        
             send \"${{ secrets.GHUSER }}\r\"
             expect \"Password\"        
             send \"${{ secrets.GHPASS }}\r\"
-            set timeout -1
+            set timeout -5
             catch wait result
             interact"
             sudo chmod -R 777 ErfanGSIs
