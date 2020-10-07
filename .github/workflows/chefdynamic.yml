@@ -17,6 +17,7 @@ env:              #change ROM_URL,ROM_NAME,ZIP_NAME,ROMZIP_NAME respectivley. RO
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
   SFDIRA2: cd /home/pfs/project/helios-gsis/Heliosbakerybills
+  SFMAIL: ${{ secrets.
   
 jobs:
   build:
