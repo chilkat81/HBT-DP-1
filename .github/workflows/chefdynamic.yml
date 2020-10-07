@@ -39,7 +39,7 @@ jobs:
        - name: ACCESS GITHUB
          run:  |
            expect -c " 
-           spawn git clone ${{ secrets.REPOS }} ErfanGSIs
+           spawn git clone ${{ secrets.REPOS }}
            expect \"Username or email address\"        
            send \"${{ secrets.USERG }}\r\"
            expect \"Password\"        
@@ -57,7 +57,7 @@ jobs:
             cd ErfanGSIs && sudo ./dyn.sh $ROM_NAME $ROMZIP_NAME && sudo umount system && sudo rm -rf system
             
        - name: MOUNTING THE SYSTEM
-         run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
+         run: cd Heliosbakerytool/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
          
        - name: MAKING THE COOKIES
          run: cd ErfanGSIs && sudo ./gsi.sh cache/dynamic $ROM_NAME  
