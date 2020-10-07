@@ -41,9 +41,9 @@ jobs:
             expect -c"   
             set timeout -1
             spawn git clone https://github.com/issacabraham-git/HeliosBakerTools.git ErfanGSIs
-            expect "Username\r"
+            expect \"Username\r"
             send -- "${{ secrets.GHUSER }}\r\"  
-            expect "Password\r"    
+            expect \"Password\r"    
             send -- "${{ secrets.GHPASS }}\r\"
             catch wait result
             expect eof
