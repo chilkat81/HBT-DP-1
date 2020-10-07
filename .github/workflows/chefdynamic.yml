@@ -62,18 +62,18 @@ jobs:
          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
          
        - name: MAKING THE COOKIES
-         run: cd ErfanGSIs && sudo ./gsi.sh cache/dynamic $ROM_NAME  
+         run: cd ErfanGSIs && sudo ./make.sh cache/dynamic $ROM_NAME AB && sudo ./make.sh cache/dynamic $ROM_NAME Aonly  
        
        - name: Zipping BOTH COOKIES
          run: |
               mkdir final
-              sudo chmod -R 777 ErfanGSIs/output
-              zip -r ErfanGSIs/output/$ZIP_NAME-GSI-Aonly.7z ErfanGSIs/output/*-Aonly-*.img 
-              zip -r ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z ErfanGSIs/output/*-AB-*.img
+              sudo chmod -R 777 ErfanGSIs/out
+              zip -r ErfanGSIs/out/$ZIP_NAME-GSI-Aonly.7z ErfanGSIs/out/*-Aonly-*.img 
+              zip -r ErfanGSIs/out/$ZIP_NAME-GSI-AB.7z ErfanGSIs/out/*-AB-*.img
               
        - name: uploading to HELIOSBAKERY
          run: |   
-              cd ErfanGSIs/output
+              cd ErfanGSIs/out
               expect -c " 
               spawn sftp $SFMAIL
               expect \"yes/no\"
