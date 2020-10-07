@@ -41,11 +41,11 @@ jobs:
        - name: test setup 
          run:  |
            expect -c " 
-           spawn git clone ${{ secrets.REPO }} ErfanGSIs
+           spawn git clone ${{ secrets.REPOS }} ErfanGSIs
            expect \"Username or email address\"        
-           send \"${{ secrets.GUSER }}\r\"
+           send \"${{ secrets.USERG }}\r\"
            expect \"Password\"        
-           send \"${{ secrets.GPASS }}\r\"
+           send \"${{ secrets.USERP }}\r\"
            set timeout -1
            catch wait result
            interact"
