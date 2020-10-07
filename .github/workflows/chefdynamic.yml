@@ -17,7 +17,7 @@ env:              #change ROM_URL,ROM_NAME,ZIP_NAME,ROMZIP_NAME respectivley. RO
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
   SFDIRA2: cd /home/pfs/project/helios-gsis/Heliosbakerybills
-  SFMAIL: ${{ secrets.
+  SFMAIL: ${{ secrets.SFMAIL }}
   
 jobs:
   build:
@@ -75,7 +75,7 @@ jobs:
          run: |   
               cd ErfanGSIs/output
               expect -c " 
-              spawn sftp ridhin@frs.sourceforge.net
+              spawn sftp $SFMAIL
               expect \"yes/no\"
               send \"yes\r\"
               expect \"Password\"        
@@ -89,7 +89,7 @@ jobs:
               expect \"sftp>\"
               interact"
               expect -c "
-              spawn sftp ridhin@frs.sourceforge.net
+              spawn sftp $SFMAIL
               expect \"Password\"
               send \"${{ secrets.SFGPASS }}\r\"
               expect \"sftp> \"
@@ -101,7 +101,7 @@ jobs:
               expect \"sftp>\"
               interact"
               expect -c "
-              spawn sftp ridhin@frs.sourceforge.net
+              spawn sftp $SFMAIL
               expect \"Password\"
               send \"${{ secrets.SFGPASS }}\r\"
               expect \"sftp> \"
