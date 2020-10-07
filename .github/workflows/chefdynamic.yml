@@ -33,9 +33,7 @@ jobs:
             sudo -E apt-get -qq update
             sudo -E apt-get -qq install git openjdk-8-jdk wget
             sudo -E apt-get -qq install python3
-            sudo -E apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php*
             sudo -E apt-get -qq install simg2img
-            sudo -E apt-get clean 
             sudo apt install expect -y
             
        - name: ACCESS GITHUB
