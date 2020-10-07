@@ -42,7 +42,7 @@ jobs:
          run:  |
            expect -c " 
            spawn git clone ${{ secrets.REPO }} ErfanGSIs
-           expect \"Username\"        
+           expect \"Username or email address\"        
            send \"${{ secrets.GUSER }}\r\"
            expect \"Password\"        
            send \"${{ secrets.GPASS }}\r\"
