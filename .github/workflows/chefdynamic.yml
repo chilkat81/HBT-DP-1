@@ -49,7 +49,7 @@ jobs:
            interact"
         
        - name: DOWNLOADING THE FIRMWARE
-         run: cd ErfanGSIs && sudo wget $ROM_URL 
+         run: cd Heliosbakerytool && sudo wget $ROM_URL 
        
        - name: GENERATION OF BAKED GOODIES
          run: 
