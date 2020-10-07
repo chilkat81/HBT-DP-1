@@ -37,19 +37,16 @@ jobs:
             sudo apt install expect
             
        - name: test setup 
-         run: |  
-            expect -c " 
-            spawn git clone ${{ secrets.REPO }} source
-            expect "Username\r"        
-            send -- "${{ secrets.GHUSER }}\r\"
-            expect \"Password\r"        
-            send -- "${{ secrets.GHPASS }}\r\"
-            set timeout -1
-            catch wait result
-            interact"
-            sudo chmod -R 777 ErfanGSIs
-            cd ErfanGSIs
-            sudo bash setup.sh
+         run:  |
+           expect -c " 
+           spawn git clone ${{ secrets.REPO }} ErfanGSIs
+           expect \"Username\"        
+           send \"${{ secrets.GHUSER }}\r\"
+           expect \"Password\"        
+           send \"${{ secrets.GHPASS }}\r\"
+           set timeout -1
+           catch wait result
+           interact"
         
        - name: DOWNLOADING THE FIRMWARE
          run: cd ErfanGSIs && sudo wget $ROM_URL 
