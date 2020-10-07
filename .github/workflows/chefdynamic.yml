@@ -8,10 +8,10 @@ on:
       types: [started]
     
 env:              #change ROM_URL,ROM_NAME,ZIP_NAME,ROMZIP_NAME respectivley. ROM_NAME is case sensitive 
-  ROM_URL: https://bigota.d.miui.com/V12.1.2.0.RJAMIXM/miui_CMIGlobal_V12.1.2.0.RJAMIXM_ef34b27a92_11.0.zip
-  ROMZIP_NAME: miui_CMIGlobal_V12.1.2.0.RJAMIXM_ef34b27a92_11.0.zip
-  ROM_NAME: MIUI
-  ZIP_NAME: MIUI10PRO-HELIOS-07-10
+  ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/NordOxygen/NordOxygen_14.O.10_GLO_010_2009260504/NordOxygen_14.O.10_OTA_010_all_2009260504_113aafee5.zip
+  ROMZIP_NAME: NordOxygen_14.O.10_OTA_010_all_2009260504_113aafee5.zip
+  ROM_NAME: OxygenOS
+  ZIP_NAME: OxygenOS-HELIOS-07-10
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   SECRETS_GITPASS: ${{ secrets.GIT }}
   TZ: Middle-East/Kuwait
