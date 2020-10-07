@@ -38,15 +38,14 @@ jobs:
             
        - name: test setup 
          run: |  
-            expect -c"   
-            set timeout -1
-            spawn git clone https://github.com/issacabraham-git/HeliosBakerTools.git ErfanGSIs
-            expect \"Username\r"
-            send -- "${{ secrets.GHUSER }}\r\"  
-            expect \"Password\r"    
+            expect -c " 
+            spawn git clone ${{ secrets.REPO }} source
+            expect \"Username\"        
+            send -- "${{ secrets.GHUSER }}\r\"
+            expect \"Password\"        
             send -- "${{ secrets.GHPASS }}\r\"
+            set timeout -1
             catch wait result
-            expect eof
             interact"
             sudo chmod -R 777 ErfanGSIs
             cd ErfanGSIs
