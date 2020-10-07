@@ -8,10 +8,10 @@ on:
       types: [started]
     
 env:              #change ROM_URL,ROM_NAME,ZIP_NAME,ROMZIP_NAME respectivley. ROM_NAME is case sensitive 
-  ROM_URL: https://dl.google.com/dl/android/aosp/crosshatch-rp1a.201005.004-factory-c7b477a7.zip
-  ROMZIP_NAME: crosshatch-rp1a.201005.004-factory-c7b477a7.zip
-  ROM_NAME: Pixel
-  ZIP_NAME: Pixel-HELIOS-07-10
+  ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/NordOxygen/NordOxygen_14.O.10_GLO_010_2009260504/NordOxygen_14.O.10_OTA_010_all_2009260504_113aafee5.zip
+  ROMZIP_NAME: NordOxygen_14.O.10_OTA_010_all_2009260504_113aafee5.zip
+  ROM_NAME: OxygenOS
+  ZIP_NAME: OxygenOSnord-HELIOS-07-10
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   SECRETS_GITPASS: ${{ secrets.GIT }}
   TZ: Middle-East/Kuwait
