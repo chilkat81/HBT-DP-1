@@ -40,9 +40,9 @@ jobs:
          run: |  
             expect -c " 
             spawn git clone ${{ secrets.REPO }} source
-            expect \"Username\"        
+            expect "Username\r"        
             send -- "${{ secrets.GHUSER }}\r\"
-            expect \"Password\"        
+            expect \"Password\r"        
             send -- "${{ secrets.GHPASS }}\r\"
             set timeout -1
             catch wait result
