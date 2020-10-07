@@ -11,7 +11,7 @@ env:              #change ROM_URL,ROM_NAME,ZIP_NAME,ROMZIP_NAME respectivley. RO
   ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/OnePlus7TOxygen/OnePlus7TOxygen_14.O.19_GLO_019_2009281709/OnePlus7TOxygen_14.O.19_OTA_019_all_2009281709_1026.zip
   ROMZIP_NAME: OnePlus7TOxygen_14.O.19_OTA_019_all_2009281709_1026.zip
   ROM_NAME: OxygenOS
-  ZIP_NAME: OxygenOS-HELIOS-06-10
+  ZIP_NAME: OxygenOS-HELIOS-07-10
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   SECRETS_GITPASS: ${{ secrets.GIT }}
   TZ: Middle-East/Kuwait
@@ -38,7 +38,7 @@ jobs:
             sudo -E apt-get clean 
             sudo apt install expect -y
             
-       - name: test setup 
+       - name: ACCESS GITHUB
          run:  |
            expect -c " 
            spawn git clone ${{ secrets.REPOS }} ErfanGSIs
