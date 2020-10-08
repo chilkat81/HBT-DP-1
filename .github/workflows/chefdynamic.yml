@@ -6,9 +6,7 @@ on:
 
   watch: 
       types: [started]
-jobs:
-  build:
-    runs-on: ubuntu-latest
+
       
     
 env:              #change ROM_URL,ROM_NAME,ZIP_NAME,ROMZIP_NAME respectivley. ROM_NAME is case sensitive 
@@ -25,7 +23,10 @@ env:              #change ROM_URL,ROM_NAME,ZIP_NAME,ROMZIP_NAME respectivley. RO
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
   SFDIRA2: cd /home/pfs/project/helios-gsis/Heliosbakerybills
   SFMAIL: ${{ secrets.SFMAIL }}
-  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
 
     steps:
        - name: Checkout
