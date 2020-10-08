@@ -6,6 +6,10 @@ on:
 
   watch: 
       types: [started]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+      
     
 env:              #change ROM_URL,ROM_NAME,ZIP_NAME,ROMZIP_NAME respectivley. ROM_NAME is case sensitive 
   ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/NordOxygen/NordOxygen_14.O.10_GLO_010_2009260504/NordOxygen_14.O.10_OTA_010_all_2009260504_113aafee5.zip
@@ -14,6 +18,9 @@ env:              #change ROM_URL,ROM_NAME,ZIP_NAME,ROMZIP_NAME respectivley. RO
   ZIP_NAME: OxygenOS-HELIOS-07-10
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   SECRETS_GITPASS: ${{ secrets.GIT }}
+  SECRETS_REPOS: ${{ secrets.REPOS }}
+  SECRETS_USERG: ${{ secrets.USERG }}
+  SECRETS_USERP: ${{ secrets.USERP }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
   SFDIRA2: cd /home/pfs/project/helios-gsis/Heliosbakerybills
@@ -42,9 +49,9 @@ jobs:
            expect -c " 
            spawn git clone --recurse-submodules ${{ secrets.REPOS }} ErfanGSIs
            expect \"Username or email address\"        
-           send \"${{ secrets.USERG }}\r\"
+           send \"$SECRETS_USERG\r\"
            expect \"Password\"        
-           send \"${{ secrets.USERP }}\r\"
+           send \"$SECRETS_USERP\r\"
            set timeout -1
            catch wait result
            interact"
