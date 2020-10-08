@@ -26,10 +26,6 @@ env:              #change ROM_URL,ROM_NAME,ZIP_NAME,ROMZIP_NAME respectivley. RO
   SFDIRA2: cd /home/pfs/project/helios-gsis/Heliosbakerybills
   SFMAIL: ${{ secrets.SFMAIL }}
   
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
 
     steps:
        - name: Checkout
