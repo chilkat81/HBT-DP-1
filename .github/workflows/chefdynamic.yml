@@ -38,9 +38,7 @@ jobs:
             sudo apt install expect -y
             
        - name: ACCESS GITHUB
-         run:  |
-           sudo mkdir ErfanGSIs
-           sudo chmod -R 777 ErfanGSIs
+         run: |
            expect -c " 
            spawn git clone --recurse-submodules ${{ secrets.REPOS }} ErfanGSIs
            expect \"Username or email address\"        
@@ -50,6 +48,7 @@ jobs:
            set timeout -1
            catch wait result
            interact"
+           sudo chmod -R 777 ErfanGSIs
         
        - name: DOWNLOADING THE FIRMWARE
          run: cd ErfanGSIs && bash setup.sh && sudo wget $ROM_URL 
