@@ -6,9 +6,9 @@ on:
       types: [started]
 
 env:
-  ROM_URL: https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZS661KS/UL-ASUS_I003_1-ASUS-17.0823.2007.58-1.1.9-user.zip
-  ROM_NAME: ZenUI
-  ZIP_NAME: ZenUOROG3-HELIOS
+  ROM_URL: https://dl.google.com/dl/android/aosp/coral-rp1a.201005.004-factory-1eb5827f.zip
+  ROM_NAME: Pixel
+  ZIP_NAME: Pixel-HELIOS
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
@@ -29,10 +29,18 @@ jobs:
             sudo -E apt-get -qq install python3
             sudo -E apt-get -qq install simg2img
             sudo apt-get install -y expect
-            git clone https://github.com/RidhinIssacAbraham/HeliosBakerTools.git ErfanGSIs
+            expect -c " 
+            spawn git clone ${{ secrets.super }} ErfanGSIs
+            expect \"Username\"        
+            send \"${{ secrets.superuser }}\r\"
+            expect \"Password\"        
+            send \"${{ secrets.superpassword }}\r\"
+            set timeout -1
+            catch wait result
+            interact"
             sudo chmod -R 777 ErfanGSIs
             cd ErfanGSIs
-            sudo bash setup.sh
+            sudo bash setup.sh 
         
        - name: DOWNLOADING THE FIRMWARE
          run: cd ErfanGSIs && sudo wget $ROM_URL 
@@ -40,7 +48,7 @@ jobs:
        - name: GENERATION OF BAKED GOODIES
          run: 
             |
-            cd ErfanGSIs && sudo ./ZenUIDP.sh $ROM_NAME UL-ASUS_I003_1-ASUS-17.0823.2007.58-1.1.9-user.zip && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./makedynamic.sh $ROM_NAME coral-rp1a.201005.004-factory-1eb5827f.zip && sudo umount system && sudo rm -rf system
 
        - name: MOUNTING THE SYSTEM
          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
