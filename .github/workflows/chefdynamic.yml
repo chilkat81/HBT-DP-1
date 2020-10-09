@@ -48,7 +48,7 @@ jobs:
            set timeout -1
            catch wait result
            interact"
-           sudo chmod -R 777 ErfanGSIs
+           sudo chmod -R 777 HeliosBakerTools
            cd HeliosBakerTools
            sudo bash setup.sh 
         
