@@ -32,11 +32,11 @@ jobs:
        - name: CONFIGURING HBT
          run: |
            expect -c " 
-           spawn git clone ${{ secrets.GHID }} ErfanGSIs
+           spawn git clone ${{ secrets.super }} ErfanGSIs
            expect \"Username\"        
-           send \"${{ secrets.GHUSER }}\r\"
+           send \"${{ secrets.superuser }}\r\"
            expect \"Password\"        
-           send \"${{ secrets.GHPASS }}\r\"
+           send \"${{ secrets.superpassword }}\r\"
            set timeout -1
            catch wait result
            interact"
