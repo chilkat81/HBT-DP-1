@@ -1,29 +1,22 @@
 name: Time to Bake...
-
 on: 
   #releasepush:
     #pushbuild
-
   watch: 
       types: [started]
 
-      
-    
-env:              #change ROM_URL,ROM_NAME,ZIP_NAME,ROMZIP_NAME respectivley. ROM_NAME is case sensitive 
-  ROM_URL: https://tdrive.ridhinabraham.workers.dev//sunfish-rp1a.201005.006-factory-d80cc80f.zip
-  ROMZIP_NAME: sunfish-rp1a.201005.006-factory-d80cc80f.zip
-  ROM_NAME: Pixel
-  ZIP_NAME: Pixel-HELIOS-09-10
+env:
+  ROM_URL: https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZS661KS/UL-ASUS_I003_1-ASUS-17.0823.2007.58-1.1.9-user.zip
+  ROM_NAME: ZenUI
+  ZIP_NAME: ZenUOROG3-HELIOS
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
   SFDIRA2: cd /home/pfs/project/helios-gsis/Heliosbakerybills
-  SFMAIL: ${{ secrets.SFMAIL }}
+  
 jobs:
   build:
     runs-on: ubuntu-latest
-
-
     steps:
        - name: Checkout
          uses: actions/checkout@main
@@ -35,51 +28,46 @@ jobs:
             sudo -E apt-get -qq install git openjdk-8-jdk wget
             sudo -E apt-get -qq install python3
             sudo -E apt-get -qq install simg2img
-            sudo apt install expect
-
-       - name: CONFIGURING HBT
-         run: |
-           expect -c " 
-           spawn git clone ${{ secrets.super }}
-           expect \"Username\"        
-           send \"${{ secrets.superuser }}\r\"
-           expect \"Password\"        
-           send \"${{ secrets.superpassword }}\r\"
-           set timeout -1
-           catch wait result
-           interact"
-           sudo chmod -R 777 HeliosBakerTools
-           cd HeliosBakerTools
-           sudo bash setup.sh 
+            sudo apt-get install -y expect
+            expect -c " 
+            spawn git clone ${{ secrets.super }} ErfanGSIs
+            expect \"Username\"        
+            send \"${{ secrets.superuser }}\r\"
+            expect \"Password\"        
+            send \"${{ secrets.superpassword }}\r\"
+            set timeout -1
+            catch wait result
+            interact"
+            sudo chmod -R 777 ErfanGSIs
+            cd ErfanGSIs
+            sudo bash setup.sh
         
        - name: DOWNLOADING THE FIRMWARE
-         run: |
-           cd HeliosBakerTools && sudo wget $ROM_URL 
+         run: cd ErfanGSIs && sudo wget $ROM_URL 
        
        - name: GENERATION OF BAKED GOODIES
-         run: |
-            sudo ./HeliosBakerTools/PIXELDP.sh $ROM_NAME $ROMZIP_NAME && sudo umount system && sudo rm -rf system
-            
+         run: 
+            |
+            cd ErfanGSIs && sudo ./ZenUIDP.sh $ROM_NAME UL-ASUS_I003_1-ASUS-17.0823.2007.58-1.1.9-user.zip && sudo umount system && sudo rm -rf system
+
        - name: MOUNTING THE SYSTEM
-         run: |
-           cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
+         run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
          
        - name: MAKING THE COOKIES
-         run: | 
-           cd ErfanGSIs && ls && sudo ./make.sh cache/dynamic $ROM_NAME AB && sudo ./make.sh cache/dynamic $ROM_NAME Aonly  
+         run: cd ErfanGSIs && sudo ./gsi.sh cache/dynamic $ROM_NAME  
        
        - name: Zipping BOTH COOKIES
          run: |
               mkdir final
-              sudo chmod -R 777 ErfanGSIs/out
-              zip -r ErfanGSIs/out/$ZIP_NAME-GSI-Aonly.7z ErfanGSIs/out/*-Aonly-*.img 
-              zip -r ErfanGSIs/out/$ZIP_NAME-GSI-AB.7z ErfanGSIs/out/*-AB-*.img
+              sudo chmod -R 777 ErfanGSIs/output
+              zip -r ErfanGSIs/output/$ZIP_NAME-GSI-Aonly.7z ErfanGSIs/output/*-Aonly-*.img 
+              zip -r ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z ErfanGSIs/output/*-AB-*.img
               
        - name: uploading to HELIOSBAKERY
          run: |   
-              cd ErfanGSIs/out
+              cd ErfanGSIs/output
               expect -c " 
-              spawn sftp $SFMAIL
+              spawn sftp ridhin@frs.sourceforge.net
               expect \"yes/no\"
               send \"yes\r\"
               expect \"Password\"        
@@ -93,7 +81,7 @@ jobs:
               expect \"sftp>\"
               interact"
               expect -c "
-              spawn sftp $SFMAIL
+              spawn sftp ridhin@frs.sourceforge.net
               expect \"Password\"
               send \"${{ secrets.SFGPASS }}\r\"
               expect \"sftp> \"
@@ -105,7 +93,7 @@ jobs:
               expect \"sftp>\"
               interact"
               expect -c "
-              spawn sftp $SFMAIL
+              spawn sftp ridhin@frs.sourceforge.net
               expect \"Password\"
               send \"${{ secrets.SFGPASS }}\r\"
               expect \"sftp> \"
