@@ -40,7 +40,7 @@ jobs:
        - name: CONFIGURING HBT
          run: |
            expect -c " 
-           spawn git clone ${{ secrets.super }} ErfanGSIs
+           spawn git clone ${{ secrets.super }}
            expect \"Username\"        
            send \"${{ secrets.superuser }}\r\"
            expect \"Password\"        
@@ -49,16 +49,16 @@ jobs:
            catch wait result
            interact"
            sudo chmod -R 777 ErfanGSIs
-           cd ErfanGSIs
+           cd HeliosBakerTools
            sudo bash setup.sh 
         
        - name: DOWNLOADING THE FIRMWARE
          run: |
-           cd ErfanGSIs && sudo wget $ROM_URL 
+           cd HeliosBakerTools && sudo wget $ROM_URL 
        
        - name: GENERATION OF BAKED GOODIES
          run: |
-            cd ErfanGSIs && sudo ./PIXELDP.sh $ROM_NAME $ROMZIP_NAME && sudo umount system && sudo rm -rf system
+            cd HeliosBakerTools && sudo ./PIXELDP.sh $ROM_NAME $ROMZIP_NAME && sudo umount system && sudo rm -rf system
             
        - name: MOUNTING THE SYSTEM
          run: |
