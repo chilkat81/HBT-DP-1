@@ -1,4 +1,4 @@
-name: setting up environment
+name: TIME TO BAKE .......
 
 on:
 #  release:
@@ -22,15 +22,17 @@ jobs:
        - name: Checkout
          uses: actions/checkout@main
 
-       - name: initialization
+       - name: SETTING UP THE SPICES
          run: |
            sudo apt install expect -y
            sudo apt install python3
+           sudo -E apt-get -qq update
+           sudo -E apt-get -qq install simg2img
       
-       - name: Syncing up the repo and starting up the docker
+       - name: CONFIGURING HBT
          run: |
            expect -c " 
-           spawn git clone ${{ secrets.GHID }} ErfanGSIs
+           spawn git clone --recurse-submodules ${{ secrets.GHID }} ErfanGSIs
            expect \"Username\"        
            send \"${{ secrets.GHUSER }}\r\"
            expect \"Password\"        
@@ -38,5 +40,75 @@ jobs:
            set timeout -1
            catch wait result
            interact"
+           sudo chmod -R 777 ErfanGSIs
+           cd ErfanGSIs
+           sudo bash setup.sh 
+               
+       - name: DOWNLOADING THE FIRMWARE
+         run: |
+           cd ErfanGSIs && sudo wget $ROM_URL 
+       
+       - name: GENERATION OF BAKED GOODIES
+         run: |
+            cd ErfanGSIs && sudo ./dyn.sh $ROM_NAME $ROMZIP_NAME && sudo umount system && sudo rm -rf system
+            
+       - name: MOUNTING THE SYSTEM
+         run: |
+           cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
+         
+       - name: MAKING THE COOKIES
+         run: | 
+           cd ErfanGSIs && sudo ./make.sh cache/dynamic $ROM_NAME AB && sudo ./make.sh cache/dynamic $ROM_NAME Aonly  
+       
+       - name: Zipping BOTH COOKIES
+         run: |
+              mkdir final
+              sudo chmod -R 777 ErfanGSIs/out
+              zip -r ErfanGSIs/out/$ZIP_NAME-GSI-Aonly.7z ErfanGSIs/out/*-Aonly-*.img 
+              zip -r ErfanGSIs/out/$ZIP_NAME-GSI-AB.7z ErfanGSIs/out/*-AB-*.img
+              
+       - name: uploading to HELIOSBAKERY
+         run: |   
+              cd ErfanGSIs/out
+              expect -c " 
+              spawn sftp $SFMAIL
+              expect \"yes/no\"
+              send \"yes\r\"
+              expect \"Password\"        
+              send \"${{ secrets.SFGPASS }}\r\"
+              expect \"sftp> \"
+              send \"$SFDIRA2\r\"
+              set timeout -1
+              send \"put *-Aonly-*.txt\r\"
+              expect \"Uploading\"
+              expect \"100%\"
+              expect \"sftp>\"
+              interact"
+              expect -c "
+              spawn sftp $SFMAIL
+              expect \"Password\"
+              send \"${{ secrets.SFGPASS }}\r\"
+              expect \"sftp> \"
+              send \"$SFDIRA1\r\"
+              set timeout -1
+              send \"put $ZIP_NAME-GSI-Aonly.7z\r\"
+              expect \"Uploading\"
+              expect \"100%\"
+              expect \"sftp>\"
+              interact"
+              expect -c "
+              spawn sftp $SFMAIL
+              expect \"Password\"
+              send \"${{ secrets.SFGPASS }}\r\"
+              expect \"sftp> \"
+              send \"$SFDIRA1\r\"
+              set timeout -1
+              send \"put $ZIP_NAME-GSI-AB.7z\r\"
+              expect \"Uploading\"
+              expect \"100%\"
+              expect \"sftp>\"
+              send \"bye\r\"
+              interact"      
+           
            
            
