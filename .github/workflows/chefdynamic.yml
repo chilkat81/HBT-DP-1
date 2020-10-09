@@ -60,7 +60,7 @@ jobs:
        
        - name: GENERATION OF BAKED GOODIES
          run: |
-            cd ErfanGSIs && sudo ./makedynamic.sh $ROM_NAME $ROMZIP_NAME && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./dyn.sh $ROM_NAME $ROMZIP_NAME && sudo umount system && sudo rm -rf system
             
        - name: MOUNTING THE SYSTEM
          run: |
