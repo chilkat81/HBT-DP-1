@@ -36,7 +36,8 @@ jobs:
             sudo -E apt-get -qq install python3
             sudo -E apt-get -qq install simg2img
             sudo apt install expect -y
-            
+            sudo apt-get install -y tcl-expect
+
        - name: CONFIGURING HBT
          run: |
            expect -c " 
