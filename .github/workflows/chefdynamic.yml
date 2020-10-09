@@ -41,14 +41,16 @@ jobs:
          run: |
            expect -c " 
            spawn git clone --recurse-submodules ${{ secrets.super }} ErfanGSIs
-           expect \"Username\"        
+           expect \"Username\"             
            send \"${{ secrets.superuser }}\r\"
-           expect \"Password\"        
+           expect \"Password\"          
            send \"${{ secrets.superpassword }}\r\""
            set timeout -1
            catch wait result
            interact"
            sudo chmod -R 777 ErfanGSIs
+           cd ErfanGSIs
+           sudo bash setup.sh 
         
        - name: DOWNLOADING THE FIRMWARE
          run: |
