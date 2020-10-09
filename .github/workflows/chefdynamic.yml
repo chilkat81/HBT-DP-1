@@ -58,7 +58,7 @@ jobs:
        
        - name: GENERATION OF BAKED GOODIES
          run: |
-            cd HeliosBakerTools && ls && sudo ./PIXELDP.sh $ROM_NAME $ROMZIP_NAME && sudo umount system && sudo rm -rf system
+            sudo ./HeliosBakerTools/PIXELDP.sh $ROM_NAME $ROMZIP_NAME && sudo umount system && sudo rm -rf system
             
        - name: MOUNTING THE SYSTEM
          run: |
