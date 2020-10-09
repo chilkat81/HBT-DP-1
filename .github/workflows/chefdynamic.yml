@@ -46,7 +46,6 @@ jobs:
            expect \"Password\"          
            send \"${{ secrets.superpassword }}\r\""
            set timeout -1
-           catch wait result
            interact"
            sudo chmod -R 777 ErfanGSIs
            cd ErfanGSIs
