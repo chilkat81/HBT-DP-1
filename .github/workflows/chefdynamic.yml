@@ -35,8 +35,7 @@ jobs:
             sudo -E apt-get -qq install git openjdk-8-jdk wget
             sudo -E apt-get -qq install python3
             sudo -E apt-get -qq install simg2img
-            sudo apt install expect -y
-            sudo apt-get install -y tcl-expect
+            sudo apt install expect
 
        - name: CONFIGURING HBT
          run: |
