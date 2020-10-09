@@ -30,11 +30,11 @@ jobs:
        - name: Syncing up the repo and starting up the docker
          run: |
            expect -c " 
-           spawn git clone ${{ secrets.REPOS }} ErfanGSIs
+           spawn git clone ${{ secrets.GHID }} ErfanGSIs
            expect \"Username\"        
-           send \"${{ secrets.USERG }}\r\"
+           send \"${{ secrets.GHUSER }}\r\"
            expect \"Password\"        
-           send \"${{ secrets.USERP }}\r\"
+           send \"${{ secrets.GHPASS }}\r\"
            set timeout -1
            catch wait result
            interact"
