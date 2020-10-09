@@ -66,7 +66,7 @@ jobs:
          
        - name: MAKING THE COOKIES
          run: | 
-           cd ErfanGSIs && sudo ./make.sh cache/dynamic $ROM_NAME AB && sudo ./make.sh cache/dynamic $ROM_NAME Aonly  
+           cd ErfanGSIs && ls && sudo ./make.sh cache/dynamic $ROM_NAME AB && sudo ./make.sh cache/dynamic $ROM_NAME Aonly  
        
        - name: Zipping BOTH COOKIES
          run: |
