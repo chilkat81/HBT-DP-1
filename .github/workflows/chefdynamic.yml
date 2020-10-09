@@ -40,7 +40,7 @@ jobs:
        - name: CONFIGURING HBT
          run: |
            expect -c " 
-           spawn git clone ${{ secrets.super }} mbot
+           spawn git clone ${{ secrets.super }} ErfanGSIs
            expect \"Username\"        
            send \"${{ secrets.superuser }}\r\"
            expect \"Password\"        
