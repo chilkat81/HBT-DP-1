@@ -32,7 +32,7 @@ jobs:
        - name: CONFIGURING HBT
          run: |
            expect -c " 
-           spawn git clone --recurse-submodules ${{ secrets.GHID }} ErfanGSIs
+           spawn git clone ${{ secrets.GHID }} ErfanGSIs
            expect \"Username\"        
            send \"${{ secrets.GHUSER }}\r\"
            expect \"Password\"        
