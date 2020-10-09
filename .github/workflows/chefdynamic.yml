@@ -1,54 +1,42 @@
-name: Time to Bake...
+name: setting up environment
 
-on: 
-  #releasepush:
-    #pushbuild
-
-  watch: 
-      types: [started]
-
-      
+on:
+#  release:
+#    types: [published]
+#  push:
+#    branches:
+#      - main
+#    paths:
+#      - '.config'
+#  schedule:
+#    - cron: 0 8 * * 5
+  watch:
+    types: [started]
     
-env:              #change ROM_URL,ROM_NAME,ZIP_NAME,ROMZIP_NAME respectivley. ROM_NAME is case sensitive 
-  ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/NordOxygen/NordOxygen_14.O.10_GLO_010_2009260504/NordOxygen_14.O.10_OTA_010_all_2009260504_113aafee5.zip
-  ROMZIP_NAME: NordOxygen_14.O.10_OTA_010_all_2009260504_113aafee5.zip
-  ROM_NAME: OxygenOS
-  ZIP_NAME: OxygenOS-HELIOS-07-10
-  SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
-  SECRETS_GITPASS: ${{ secrets.GIT }}
-  SECRETS_REPOS: ${{ secrets.REPOS }}
-  SECRETS_USERG: ${{ secrets.USERG }}
-  SECRETS_USERP: ${{ secrets.USERP }}
-  TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
-  SFDIRA2: cd /home/pfs/project/helios-gsis/Heliosbakerybills
-  SFMAIL: ${{ secrets.SFMAIL }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
-
     steps:
        - name: Checkout
          uses: actions/checkout@main
-       
-           
-       - name: Setting up the SPICES and its SPICES
+
+       - name: initialization
          run: |
-            sudo -E apt-get -qq update
-            sudo -E apt-get -qq install simg2img
-            sudo apt install expect -y
-            
-       - name: ACCESS GITHUB
+           sudo apt install expect -y
+           sudo apt install python3
+      
+       - name: Syncing up the repo and starting up the docker
          run: |
            expect -c " 
-           spawn git clone --recurse-submodules ${{ secrets.REPOS }} ErfanGSIs
-           expect \"Username or email address\"        
-           send \"$SECRETS_USERG\r\"
+           spawn git clone ${{ secrets.REPOS }} ErfanGSIs
+           expect \"Username\"        
+           send \"${{ secrets.USERG }}\r\"
            expect \"Password\"        
-           send \"$SECRETS_USERP\r\"
+           send \"${{ secrets.USERP }}\r\"
            set timeout -1
            catch wait result
            interact"
- 
-                             
+           
+           
