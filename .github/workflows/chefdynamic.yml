@@ -7,60 +7,58 @@ on:
 
 env:
   ROM_URL: https://tdrive.ridhinabraham.workers.dev//OnePlus7TProOxygen_14.O.19_OTA_019_all_2009281704_a69c6577c.zip
-  ROM_NAME: OxygenOS78
-  $ROMZIP_NAME: OnePlus7TProOxygen_14.O.19_OTA_019_all_2009281704_a69c6577c.zip
-  ZIP_NAME: OOS7TPRO-HELIOS
+  ROM_NAME: OxygenOS
+  ZIP_NAME: OxygenOS-HELIOS
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
   SFDIRA2: cd /home/pfs/project/helios-gsis/Heliosbakerybills
   
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-       - name: Checkout
-         uses: actions/checkout@main
+    build:
+       runs-on: ubuntu-latest
+    
+    
+       steps:
+        - name: Checkout
+          uses: actions/checkout@main
        
            
-       - name: Setting up the SPICES and its SPICES
-         run: |
+        - name: Setting up the SPICES and its SPICES
+          run: |
             sudo -E apt-get -qq update
             sudo -E apt-get -qq install git openjdk-8-jdk wget
-            sudo apt install python-minimal
+            sudo -E apt-get -qq install python3
             sudo -E apt-get -qq install simg2img
             sudo apt-get install -y expect
-            
-       - name: Setting up the BAKERY
-         run: |
-            git clone --recurse-submodules https://github.com/RidhinIssacAbraham/H_B_T_D.git ErfanGSIs
-            sudo chmod -R 777 ErfanGSIs
+            git clone --recurse-submodules https://github.com/RidhinIssacAbraham/H_B_T_D.git ErfanGSIS
+             sudo chmod -R 777 ErfanGSIs
             cd ErfanGSIs
-            sudo bash setup.sh 
-        
-       - name: DOWNLOADING THE FIRMWARE
-         run: cd ErfanGSIs && sudo wget $ROM_URL 
-       
-       - name: GENERATION OF BAKED GOODIES
-         run: 
-            |
-            cd ErfanGSIs && sudo ./dynamic.sh OxygenOS $ROMZIP_NAME && sudo umount system && sudo rm -rf system
-
-       - name: MOUNTING THE SYSTEM
-         run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
+            sudo bash setup.sh
+            
+        - name: DOWNLOADING THE FIRMWARE
+          run: cd ErfanGSIs && sudo wget $ROM_URL 
+          
+        - name: GENERATION OF BAKED GOODIES
+          run: | 
+            cd ErfanGSIs && sudo ./dyn.sh $ROM_NAME OnePlus8Oxygen_15.E.19_OTA_019_all_2008080048_f62cc250.zip && sudo umount system && sudo rm -rf system
+            
+            
+        - name: MOUNTING THE SYSTEM
+          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
          
-       - name: MAKING THE COOKIES
-         run: cd ErfanGSIs && sudo ./gsi.sh cache/dynamic $ROM_NAME  
+        - name: MAKING THE COOKIES
+          run: cd ErfanGSIs && sudo ./gsi.sh cache/dynamic $ROM_NAME  
        
-       - name: Zipping BOTH COOKIES
-         run: |
+        - name: Zipping BOTH COOKIES
+          run: |
               mkdir final
               sudo chmod -R 777 ErfanGSIs/output
               zip -r ErfanGSIs/output/$ZIP_NAME-GSI-Aonly.7z ErfanGSIs/output/*-Aonly-*.img 
               zip -r ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z ErfanGSIs/output/*-AB-*.img
               
-       - name: uploading to HELIOSBAKERY
-         run: |   
+        - name: uploading to HELIOSBAKERY
+          run: |   
               cd ErfanGSIs/output
               expect -c " 
               spawn sftp ridhin@frs.sourceforge.net
