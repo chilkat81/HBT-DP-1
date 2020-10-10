@@ -33,7 +33,7 @@ jobs:
             
        - name: Setting up the BAKERY
          run: |
-            git clone --recurse-submodules ${{ secrets.super }} ErfanGSIs
+            git clone --recurse-submodules https://github.com/RidhinIssacAbraham/H_B_T_D.git ErfanGSIs
             sudo chmod -R 777 ErfanGSIs
             cd ErfanGSIs
             sudo bash setup.sh 
