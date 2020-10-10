@@ -44,7 +44,7 @@ jobs:
        - name: GENERATION OF BAKED GOODIES
          run: 
             |
-            cd ErfanGSIs && sudo chmod +x OOSDP.sh && sudo ./OOSDP.sh OxygenOS $ROMZIP_NAME && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./dyn.sh OxygenOS $ROMZIP_NAME && sudo umount system && sudo rm -rf system
 
        - name: MOUNTING THE SYSTEM
          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
