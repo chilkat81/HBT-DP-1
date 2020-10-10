@@ -30,17 +30,10 @@ jobs:
             sudo -E apt-get -qq install python3
             sudo -E apt-get -qq install simg2img
             sudo apt-get install -y expect
-            expect -c " 
-            spawn git clone ${{ secrets.super }} ErfanGSIs
-            expect \"Username\"        
-            send \"${{ secrets.superuser }}\r\"
-            expect \"Password\"        
-            send \"${{ secrets.superpassword }}\r\"
-            expect \"Password\" 
-            send \"${{ secrets.superpassword }}\r\"
-            set timeout -1
-            catch wait result
-            interact"
+            
+       - name: Setting up the BAKERY
+         run: |
+            git clone --recurse-submodules ${{ secrets.super }} ErfanGSIs
             sudo chmod -R 777 ErfanGSIs
             cd ErfanGSIs
             sudo bash setup.sh 
@@ -51,7 +44,7 @@ jobs:
        - name: GENERATION OF BAKED GOODIES
          run: 
             |
-            cd ErfanGSIs && sudo ./MIUIRDP.sh $ROM_NAME miui_CMIGlobal_V12.1.2.0.RJAMIXM_ef34b27a92_11.0.zip && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./MIUIRDP.sh $ROM_NAME $ROMZIP_NAME && sudo umount system && sudo rm -rf system
 
        - name: MOUNTING THE SYSTEM
          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
