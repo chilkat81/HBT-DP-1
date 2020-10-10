@@ -6,10 +6,10 @@ on:
       types: [started]
 
 env:
-  ROM_URL: https://tdrive.ridhinabraham.workers.dev//miui_CMIGlobal_V12.1.2.0.RJAMIXM_ef34b27a92_11.0.zip
-  ROM_NAME: MIUI
-  $ROMZIP_NAME: miui_CMIGlobal_V12.1.2.0.RJAMIXM_ef34b27a92_11.0.zip
-  ZIP_NAME: MIUI10PRO-HELIOS
+  ROM_URL: https://tdrive.ridhinabraham.workers.dev//OnePlus7TProOxygen_14.O.19_OTA_019_all_2009281704_a69c6577c.zip
+  ROM_NAME: OxygenOS78
+  $ROMZIP_NAME: OnePlus7TProOxygen_14.O.19_OTA_019_all_2009281704_a69c6577c.zip
+  ZIP_NAME: OOS7TPRO-HELIOS
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
@@ -44,7 +44,7 @@ jobs:
        - name: GENERATION OF BAKED GOODIES
          run: 
             |
-            cd ErfanGSIs && sudo ./MIUIRDP.sh $ROM_NAME $ROMZIP_NAME && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./OOSDP.sh OxygenOS $ROMZIP_NAME && sudo umount system && sudo rm -rf system
 
        - name: MOUNTING THE SYSTEM
          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
