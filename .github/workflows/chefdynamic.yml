@@ -41,7 +41,7 @@ jobs:
           
         - name: GENERATION OF BAKED GOODIES
           run: | 
-            cd ErfanGSIs && sudo ./MIUIRDP.sh OxygenOS OnePlus7TOxygen_14.O.19_OTA_019_all_2009281709_1026.zip && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./OOSDP.sh OxygenOS OnePlus7TOxygen_14.O.19_OTA_019_all_2009281709_1026.zip && sudo umount system && sudo rm -rf system
             
             
         - name: MOUNTING THE SYSTEM
