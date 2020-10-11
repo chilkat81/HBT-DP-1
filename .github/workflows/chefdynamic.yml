@@ -7,7 +7,7 @@ on:
 
 env:
   ROM_URL: https://tdrive.ridhinabraham.workers.dev//OnePlus7TProOxygen_14.O.19_OTA_019_all_2009281704_a69c6577c.zip
-  ROM_NAME: OxygenOS
+  ROM_NAME: OxygenOS78
   ZIP_NAME: OxygenOS-HELIOS
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
@@ -41,7 +41,7 @@ jobs:
           
         - name: GENERATION OF BAKED GOODIES
           run: | 
-            cd ErfanGSIs && sudo ./OOSDP.sh $ROM_NAME OnePlus7TProOxygen_14.O.19_OTA_019_all_2009281704_a69c6577c.zip && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./OOSDP.sh OxygenOS OnePlus7TProOxygen_14.O.19_OTA_019_all_2009281704_a69c6577c.zip && sudo umount system && sudo rm -rf system
             
             
         - name: MOUNTING THE SYSTEM
