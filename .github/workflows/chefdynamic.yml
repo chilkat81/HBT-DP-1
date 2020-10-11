@@ -6,9 +6,9 @@ on:
       types: [started]
 
 env:
-  ROM_URL: https://tdrive.ridhinabraham.workers.dev//OnePlus7TProOxygen_14.O.19_OTA_019_all_2009281704_a69c6577c.zip
-  ROM_NAME: OxygenOS78
-  ZIP_NAME: OxygenOS-HELIOS
+  ROM_URL: https://tdrive.ridhinabraham.workers.dev//miui_CMIGlobal_V12.1.2.0.RJAMIXM_ef34b27a92_11.0.zip
+  ROM_NAME: MIUI
+  ZIP_NAME: MIUI-HELIOS
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
@@ -41,7 +41,7 @@ jobs:
           
         - name: GENERATION OF BAKED GOODIES
           run: | 
-            cd ErfanGSIs && sudo ./OOSDP.sh OxygenOS OnePlus7TProOxygen_14.O.19_OTA_019_all_2009281704_a69c6577c.zip && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./MIUIRDP.sh MIUI miui_CMIGlobal_V12.1.2.0.RJAMIXM_ef34b27a92_11.0.zip && sudo umount system && sudo rm -rf system
             
             
         - name: MOUNTING THE SYSTEM
