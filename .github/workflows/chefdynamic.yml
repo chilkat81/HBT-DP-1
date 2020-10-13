@@ -6,9 +6,9 @@ on:
       types: [started]
 
 env:
-  ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/OnePlus7TProOxygen/OnePlus7TProOxygen_14.O.19_GLO_019_2009281704/OnePlus7TProOxygen_14.O.19_OTA_019_all_2009281704_a69c6577c.zip
-  ROM_NAME: OxygenOS7TPRO
-  ZIP_NAME: OxygenOS-7TPRO-HELIOS
+  ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/OnePlus8Oxygen/OnePlus8Oxygen_15.O.30_GLO_0300_2010031624/OnePlus8Oxygen_15.O.30_OTA_0300_all_2010031624_c5e68b42b3325.zip
+  ROM_NAME: OxygenOS8
+  ZIP_NAME: OxygenOS-8-HELIOS
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
@@ -41,7 +41,7 @@ jobs:
           
         - name: GENERATION OF BAKED GOODIES
           run: | 
-            cd ErfanGSIs && sudo ./OOSDP.sh OxygenOS OnePlus7TProOxygen_14.O.19_OTA_019_all_2009281704_a69c6577c.zip && sudo umount system && sudo rm -rf system
+            cd ErfanGSIs && sudo ./OOSDP.sh OxygenOS OnePlus8Oxygen_15.O.30_OTA_0300_all_2010031624_c5e68b42b3325.zip && sudo umount system && sudo rm -rf system
             
             
         - name: MOUNTING THE SYSTEM
