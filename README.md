@@ -22,12 +22,12 @@ SUPPORTED OEM LIST
 
 SCRIPT NAME TO BE USED EXACTLY LIKE THIS IN THE WORKFLOW
 | --------------------------------------------------------
-| 1.NUBIA-VOS-MIUIDP.sh {to be used with Nubia,Vos,MIUI}  |
-| 2.PIXELDP.sh        {Pixel 3,3xl,3a,4a,4xl}             |
-| 3.OOSDP.sh          {OnePlus 7T,7Pro,7tPro,8,8pro}      |
-| 4.MIUIRDP.sh        {Use with MIUI phoes with R}        |
-| 5.ZUIDP.sh          {Use with ZUI phones }              |
-| 6.ZenUIDP.sh        {Use with Asus phones with DP}      |
+| 1.NUBIA-VOS-MIUIDP {to be used with Nubia,Vos,MIUI}  |
+| 2.PIXELDP        {Pixel 3,3xl,3a,4a,4xl}             |
+| 3.OOSDP          {OnePlus 7T,7Pro,7tPro,8,8pro}      |
+| 4.MIUIRDP        {Use with MIUI phoes with R}        |
+| 5.ZUIDP          {Use with ZUI phones }              |
+| 6.ZenUIDP        {Use with Asus phones with DP}      |
 
 For OnePlus device use the following 
 | -------------------------------- |
