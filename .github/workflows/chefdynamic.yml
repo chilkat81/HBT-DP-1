@@ -6,11 +6,11 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/OnePlus7ProOxygen/OnePlus7ProOxygen_21.P.29_GLO_029_2009281606/OnePlus7ProOxygen_21.P.29_OTA_029_all_2009281606_becce49.zip
-  ROM_NAME: OxygenOS
-  FIRMWAREZIPNAME: OnePlus7ProOxygen_21.P.29_OTA_029_all_2009281606_becce49.zip
-  ZIP_NAME: oxygenos-7PRO-HELIOS-14-10
-  SCRIPT_NAME: OOSDP
+  ROM_URL: https://dl.google.com/dl/android/aosp/redfin-rd1a.200810.020-factory-c3ea1715.zip?hl=zh-tw
+  ROM_NAME: Pixel
+  FIRMWAREZIPNAME: redfin-rd1a.200810.020-factory-c3ea1715.zip?hl=zh-tw
+  ZIP_NAME: Pixel-5-HELIOS-18-10
+  SCRIPT_NAME: PIXELDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
