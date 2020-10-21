@@ -6,11 +6,11 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://dl.google.com/dl/android/aosp/redfin-rd1a.200810.020-factory-c3ea1715.zip?hl=zh-tw
-  ROM_NAME: Pixel
-  FIRMWAREZIPNAME: redfin-rd1a.200810.020-factory-c3ea1715.zip?hl=zh-tw
-  ZIP_NAME: Pixel-5-HELIOS-18-10
-  SCRIPT_NAME: PIXELDP
+  ROM_URL: http://bigota.d.miui.com/20.10.20/miui_DAVINCI_20.10.20_b436860943_11.0.zip
+  ROM_NAME: MIUI
+  FIRMWAREZIPNAME: miui_DAVINCI_20.10.20_b436860943_11.0.zip
+  ZIP_NAME: MIUI11-K20-HELIOS-21-10
+  SCRIPT_NAME: MIUIRDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
