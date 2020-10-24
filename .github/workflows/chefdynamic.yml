@@ -6,11 +6,11 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://tdrive.ridhinabraham.workers.dev//miui_GRAMINGlobal_V12.0.1.0.QJPINXM_be860b8c30_10.0.zip
+  ROM_URL: https://tdrive.elytra8.workers.dev/xiaomi.eu_multi_HMK30_20.10.22_v12-11.zip
   ROM_NAME: MIUI
-  FIRMWAREZIPNAME: miui_GRAMINGlobal_V12.0.1.0.QJPINXM_be860b8c30_10.0.zip
-  ZIP_NAME: MIUIPOCO-HELIOS-21-10
-  SCRIPT_NAME: NUBIA-VOS-MIUIDP
+  FIRMWAREZIPNAME: xiaomi.eu_multi_HMK30_20.10.22_v12-11.zip
+  ZIP_NAME: MIUIk30-HELIOS-21-10
+  SCRIPT_NAME: MIUIRDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
