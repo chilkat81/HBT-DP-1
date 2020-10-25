@@ -33,10 +33,20 @@ jobs:
             sudo -E apt-get -qq install python3
             sudo -E apt-get -qq install simg2img
             sudo apt-get install -y expect
-            git clone --recurse-submodules ${{ secrets.TOPSECRET }} ErfanGSIs
+            expect -c " 
+            spawn git clone ${{ secrets.TOPSECRET }} ErfanGSIs
+            expect \"Username\"        
+            send \"${{ secrets.GHUSER }}\r\"
+            expect \"Password\"        
+            send \"${{ secrets.GHPASS }}\r\"
+            expect \"Password\"        
+            send \"${{ secrets.GHPASS }}\r\"
+            set timeout -1
+            catch wait result
+            interact"
             sudo chmod -R 777 ErfanGSIs
             cd ErfanGSIs
-            sudo bash setup.sh
+            sudo bash setup.sh 
             
         - name: DOWNLOADING THE FIRMWARE
           run: cd ErfanGSIs && sudo wget $ROM_URL 
