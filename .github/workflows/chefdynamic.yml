@@ -6,11 +6,11 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZS670KS/UL-I002D-WW-29.13.7.44-user.zip
-  ROM_NAME: ZenUI
-  FIRMWAREZIPNAME: UL-I002D-WW-29.13.7.44-user.zip
-  ZIP_NAME: ZenUI-HELIOS-26-10
-  SCRIPT_NAME: ZenUIDP
+  ROM_URL: https://build.aospa.co/updates/oneplus7tpro/pa-quartz-5-oneplus7tpro-20200923.zip
+  ROM_NAME: OxygenOS
+  FIRMWAREZIPNAME: pa-quartz-5-oneplus7tpro-20200923.zip
+  ZIP_NAME: PAOP7tPRO-HELIOS-26-10
+  SCRIPT_NAME: OOSDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
