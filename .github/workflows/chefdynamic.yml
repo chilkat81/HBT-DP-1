@@ -6,11 +6,11 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://tdrive.elytra8.workers.dev/YAAP-11-Alpha-yaap_hotdogb-20201022.zip
-  ROM_NAME: OxygenOS8
-  FIRMWAREZIPNAME: YAAP-11-Alpha-yaap_hotdogb-20201022.zip
-  ZIP_NAME: YAAP11ALPHA-HELIOS-27-10
-  SCRIPT_NAME: OOSRDP
+  ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/NordOxygen/NordOxygen_14.O.11_GLO_011_2010232026/NordOxygen_14.O.11_OTA_011_all_2010232026_83bb980e97.zip
+  ROM_NAME: OxygenOS
+  FIRMWAREZIPNAME: NordOxygen_14.O.11_OTA_011_all_2010232026_83bb980e97.zip
+  ZIP_NAME: OXYGENOSNORDLATEST-HELIOS-28-10
+  SCRIPT_NAME: OOSDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
