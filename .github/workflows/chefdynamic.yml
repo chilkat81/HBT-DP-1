@@ -6,11 +6,11 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/NordOxygen/NordOxygen_14.O.11_GLO_011_2010232026/NordOxygen_14.O.11_OTA_011_all_2010232026_83bb980e97.zip
-  ROM_NAME: OxygenOS
-  FIRMWAREZIPNAME: NordOxygen_14.O.11_OTA_011_all_2010232026_83bb980e97.zip
-  ZIP_NAME: OXYGENOSNORDLATEST-HELIOS-28-10
-  SCRIPT_NAME: OOSDP
+  ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/OnePlus7TOxygen/OnePlus7TOxygen_13.W.09_GLO_009_2010191213/OnePlus7TOxygen_13.W.09_OTA_009_all_2010191213_3068911d.zip
+  ROM_NAME: OxygenOS7T
+  FIRMWAREZIPNAME: OnePlus7TOxygen_13.W.09_OTA_009_all_2010191213_3068911d.zip
+  ZIP_NAME: OXYGENOS7T-HELIOS-28-10
+  SCRIPT_NAME: NORMDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
