@@ -10,7 +10,7 @@ env:
   ROM_NAME: OxygenOS7T
   FIRMWAREZIPNAME: OnePlus7TOxygen_13.W.09_OTA_009_all_2010191213_3068911d.zip
   ZIP_NAME: OXYGENOS7T-HELIOS-28-10
-  SCRIPT_NAME: NORMDP
+  SCRIPT_NAME: OOSDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
