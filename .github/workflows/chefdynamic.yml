@@ -49,7 +49,7 @@ jobs:
             sudo bash setup.sh 
             
         - name: DOWNLOADING THE FIRMWARE
-          run: cd ErfanGSIs && sudo wget $ROM_URL && sudo mv $FIRMWAREZIPNAME payload.zip && ls 
+          run: cd ErfanGSIs && sudo curl -o $ROM_URL && sudo mv $FIRMWAREZIPNAME payload.zip && ls 
           
         - name: GENERATION OF BAKED GOODIES
           run: | 
