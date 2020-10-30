@@ -51,7 +51,7 @@ jobs:
         - name: DOWNLOADING THE FIRMWARE
           run: cd ErfanGSIs && sudo wget $ROM_URL
         - name: Renaming the download files
-          run: sudo mv $FIRMWAREZIPNAME payload.zip && ls   
+          run: cd ErfanGSIs && sudo mv $FIRMWAREZIPNAME payload.zip && ls   
         - name: GENERATION OF BAKED GOODIES
           run: | 
             cd ErfanGSIs && sudo ./$SCRIPT_NAME.sh $ROM_NAME $FIRMWAREZIPNAME && sudo umount system && sudo rm -rf system
