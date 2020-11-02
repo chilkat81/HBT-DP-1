@@ -6,11 +6,11 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://android.googleapis.com/packages/ota-api/nokia_drx_drax00ww/3c2f31327cf6e6c27efe2315fa64299215188628.zip
-  ROM_NAME: Generic
+  ROM_URL: https://dl.google.com/dl/android/aosp/bramble-rd1a.200810.020-factory-97d5c03f.zip
+  ROM_NAME: PIXEL
   FIRMWAREZIPNAME: 3c2f31327cf6e6c27efe2315fa64299215188628.zip
-  ZIP_NAME: GenericNokia-HELIOS-01-11
-  SCRIPT_NAME: NUBIA-VOS-MIUIDP
+  ZIP_NAME: Pixel-from-4a-HELIOS-02-11-2020
+  SCRIPT_NAME: PIXELDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
