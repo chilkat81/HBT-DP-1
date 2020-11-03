@@ -9,7 +9,7 @@ env:
   ROM_URL: https://dl.google.com/dl/android/aosp/bramble-rd1a.200810.020-factory-97d5c03f.zip
   ROM_NAME: Pixel
   FIRMWAREZIPNAME: bramble-rd1a.200810.020-factory-97d5c03f.zip
-  ZIP_NAME: PixelGSI from 4A5g-HELIOS-03-11-2020
+  ZIP_NAME: PixelGSI4A5G-HELIOS-03-11-2020
   SCRIPT_NAME: PIXELDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
