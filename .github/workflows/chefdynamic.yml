@@ -6,10 +6,10 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://dl.google.com/dl/android/aosp/bramble-rd1a.200810.020-factory-97d5c03f.zip
+  ROM_URL: https://dl.google.com/dl/android/aosp/redfin-rd1a.201105.003.c1-factory-18a4b5bc.zip
   ROM_NAME: Pixel
-  FIRMWAREZIPNAME: bramble-rd1a.200810.020-factory-97d5c03f.zip
-  ZIP_NAME: PixelGSI from 4A5G-HELIOS-03-11-2020
+  FIRMWAREZIPNAME: redfin-rd1a.201105.003.c1-factory-18a4b5bc.zip
+  ZIP_NAME: PixelGSI from 5-HELIOS-03-11-2020
   SCRIPT_NAME: PIXELRDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
