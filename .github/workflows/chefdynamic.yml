@@ -10,7 +10,7 @@ env:
   ROM_NAME: Pixel
   FIRMWAREZIPNAME: redfin-rd1a.201105.003.c1-factory-18a4b5bc.zip
   ZIP_NAME: PixelGSI from 5-HELIOS-03-11-2020
-  SCRIPT_NAME: PIXELRDP
+  SCRIPT_NAME: PIXELDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
