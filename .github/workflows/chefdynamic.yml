@@ -6,10 +6,10 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://dl.google.com/dl/android/aosp/blueline-rp1a.201105.002-factory-0347d8cd.zip
+  ROM_URL: https://dl.google.com/dl/android/aosp/sunfish-rp1a.201105.002-factory-da295a97.zip
   ROM_NAME: Pixel
-  FIRMWAREZIPNAME: blueline-rp1a.201105.002-factory-0347d8cd.zip
-  ZIP_NAME: Pixel3-HELIOS-04-11-2020
+  FIRMWAREZIPNAME: sunfish-rp1a.201105.002-factory-da295a97.zip
+  ZIP_NAME: Pixel4a-HELIOS-04-11-2020
   SCRIPT_NAME: PIXELDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
