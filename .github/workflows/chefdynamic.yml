@@ -6,11 +6,11 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://dl.google.com/dl/android/aosp/sunfish-rp1a.201105.002-factory-da295a97.zip
-  ROM_NAME: Pixel
-  FIRMWAREZIPNAME: sunfish-rp1a.201105.002-factory-da295a97.zip
-  ZIP_NAME: Pixel4a-HELIOS-04-11-2020
-  SCRIPT_NAME: PIXELDP
+  ROM_URL: https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZS670KS/UL-I002D-WW-29.13.7.47-user.zip
+  ROM_NAME: ZenUI
+  FIRMWAREZIPNAME: UL-I002D-WW-29.13.7.47-user.zip
+  ZIP_NAME: ZenUI-Zenfone7pro-HELIOS-06-11-2020
+  SCRIPT_NAME: ZenUIDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
