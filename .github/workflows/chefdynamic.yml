@@ -9,7 +9,7 @@ env:
   ROM_URL: https://tdrive.elytra8.workers.dev/NX627J-update.zip
   ROM_NAME: Nubia
   FIRMWAREZIPNAME: NX627J-update.zip
-  ZIP_NAME: Nubia-A11-HELIOS-07-11-2020
+  ZIP_NAME: Nubia-HELIOS-07-11-2020
   SCRIPT_NAME: NUBIARDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
