@@ -6,11 +6,11 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://tdrive.elytra8.workers.dev/NX627J-update.zip
-  ROM_NAME: Nubia
-  FIRMWAREZIPNAME: NX627J-update.zip
-  ZIP_NAME: Nubia-HELIOS-07-11-2020
-  SCRIPT_NAME: NUBIARDP
+  ROM_URL: https://dl.google.com/dl/android/aosp/sargo-rp1a.201105.002-factory-2433e0c0.zip
+  ROM_NAME: Pixel
+  FIRMWAREZIPNAME: sargo-rp1a.201105.002-factory-2433e0c0.zip
+  ZIP_NAME: MIUI-A11-HELIOS-08-11-2020
+  SCRIPT_NAME: MIUIRDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
