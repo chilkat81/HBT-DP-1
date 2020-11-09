@@ -6,11 +6,11 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://dl.google.com/dl/android/aosp/sargo-rp1a.201105.002-factory-2433e0c0.zip
-  ROM_NAME: Pixel
-  FIRMWAREZIPNAME: sargo-rp1a.201105.002-factory-2433e0c0.zip
-  ZIP_NAME: Pixel3a-A11-HELIOS-09-11-2020
-  SCRIPT_NAME: PIXELDP
+  ROM_URL: https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZS661KS/UL-ASUS_I003_1-ASUS-17.0823.2009.98-1.1.74-user.zip
+  ROM_NAME: ZenUI
+  FIRMWAREZIPNAME: UL-ASUS_I003_1-ASUS-17.0823.2009.98-1.1.74-user.zip
+  ZIP_NAME: Rog3-A11-HELIOS-09-11-2020
+  SCRIPT_NAME: ZenUIDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
