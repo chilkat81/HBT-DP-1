@@ -9,8 +9,8 @@ env:
   ROM_URL: https://dl.google.com/dl/android/aosp/sargo-rp1a.201105.002-factory-2433e0c0.zip
   ROM_NAME: Pixel
   FIRMWAREZIPNAME: sargo-rp1a.201105.002-factory-2433e0c0.zip
-  ZIP_NAME: MIUI-A11-HELIOS-08-11-2020
-  SCRIPT_NAME: MIUIRDP
+  ZIP_NAME: Pixel3a-A11-HELIOS-09-11-2020
+  SCRIPT_NAME: PIXELDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
