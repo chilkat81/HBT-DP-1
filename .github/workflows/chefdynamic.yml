@@ -6,11 +6,11 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://oxygenos.oneplus.net/OnePlus7ProOxygen_13.W.45_OTA_045_all_2010191035_fde4ca8ebd8f4cfc.zip
-  ROM_NAME: OnePlus
-  FIRMWAREZIPNAME: OnePlus7ProOxygen_13.W.45_OTA_045_all_2010191035_fde4ca8ebd8f4cfc.zip
-  ZIP_NAME: OxygeonOS-From-Op7Pro--HELIOS-11-11-2020
-  SCRIPT_NAME: OOSDP
+  ROM_URL: https://android.googleapis.com/packages/ota-api/package/91bd2d8ed8262e1a037c296e715deb25a764ddc2.zip
+  ROM_NAME: VOS
+  FIRMWAREZIPNAME: 91bd2d8ed8262e1a037c296e715deb25a764ddc2.zip
+  ZIP_NAME: VOS-From-Joy4--HELIOS-11-11-2020
+  SCRIPT_NAME: NUBIA-VOS-MIUIDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
