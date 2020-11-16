@@ -9,7 +9,7 @@ env:
   ROM_URL: https://dl.google.com/dl/android/aosp/sargo-ota-pq3b.190801.002-b79bd724.zip
   ROM_NAME: Pixel
   FIRMWAREZIPNAME: sargo-ota-pq3b.190801.002-b79bd724.zip
-  ZIP_NAME: Pixel3a-HELIOS-16-11-2020
+  ZIP_NAME: Pixel-HELIOS-16-11-2020
   SCRIPT_NAME: PIXELDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
