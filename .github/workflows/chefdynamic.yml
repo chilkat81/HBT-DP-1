@@ -6,10 +6,10 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://tdrive.elytra8.workers.dev/sunfish-rp1a.201105.002-factory-da295a97.zip
+  ROM_URL: https://dl.google.com/dl/android/aosp/sargo-ota-pq3b.190801.002-b79bd724.zip
   ROM_NAME: Pixel
-  FIRMWAREZIPNAME: sunfish-rp1a.201105.002-factory-da295a97.zip
-  ZIP_NAME: Pixel5-HELIOS-16-11-2020
+  FIRMWAREZIPNAME: sargo-ota-pq3b.190801.002-b79bd724.zip
+  ZIP_NAME: Pixel3a-HELIOS-16-11-2020
   SCRIPT_NAME: PIXELDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
