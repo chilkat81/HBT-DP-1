@@ -7,7 +7,7 @@ on:
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
   ROM_URL: http://bigota.d.miui.com/V12.0.1.0.RJWINXM/miui_CURTANAINGlobal_V12.0.1.0.RJWINXM_3ad7d510e0_11.0.zip
-  ROM_NAME: MIUI ANDROID 11
+  ROM_NAME: MIUI
   FIRMWAREZIPNAME: miui_CURTANAINGlobal_V12.0.1.0.RJWINXM_3ad7d510e0_11.0.zip
   ZIP_NAME: MIUI-Curtana-HELIOS-18-11-2020
   SCRIPT_NAME: MIUIRDP
