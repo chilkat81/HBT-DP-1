@@ -6,11 +6,11 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://dl.google.com/dl/android/aosp/sargo-ota-pq3b.190801.002-b79bd724.zip
-  ROM_NAME: Pixel
-  FIRMWAREZIPNAME: sargo-ota-pq3b.190801.002-b79bd724.zip
-  ZIP_NAME: Pixel-HELIOS-16-11-2020
-  SCRIPT_NAME: PIXELDP
+  ROM_URL: http://bigota.d.miui.com/V12.0.1.0.RJWINXM/miui_CURTANAINGlobal_V12.0.1.0.RJWINXM_3ad7d510e0_11.0.zip
+  ROM_NAME: MIUI ANDROID 11
+  FIRMWAREZIPNAME: miui_CURTANAINGlobal_V12.0.1.0.RJWINXM_3ad7d510e0_11.0.zip
+  ZIP_NAME: MIUI-Curtana-HELIOS-18-11-2020
+  SCRIPT_NAME: MIUIRDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
