@@ -6,11 +6,11 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: http://bigota.d.miui.com/V12.0.1.0.RJWINXM/miui_CURTANAINGlobal_V12.0.1.0.RJWINXM_3ad7d510e0_11.0.zip
-  ROM_NAME: MIUI
-  FIRMWAREZIPNAME: miui_CURTANAINGlobal_V12.0.1.0.RJWINXM_3ad7d510e0_11.0.zip
-  ZIP_NAME: MIUI-Curtana-HELIOS-18-11-2020
-  SCRIPT_NAME: MIUIRDP
+  ROM_URL: https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZS670KS/UL-I002D-WW-29.14.53.5-user.zip
+  ROM_NAME: ZenUI
+  FIRMWAREZIPNAME: UL-I002D-WW-29.14.53.5-user.zip
+  ZIP_NAME: ZenUI-Z7-HELIOS-21-11-2020
+  SCRIPT_NAME: ZenUIDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
