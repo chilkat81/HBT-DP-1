@@ -6,11 +6,11 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZS670KS/UL-I002D-WW-29.14.53.5-user.zip
-  ROM_NAME: ZenUI
-  FIRMWAREZIPNAME: UL-I002D-WW-29.14.53.5-user.zip
-  ZIP_NAME: ZenUI-Z7-HELIOS-21-11-2020
-  SCRIPT_NAME: ZenUIDP
+  ROM_URL: https://android.googleapis.com/packages/ota-api/package/9776e65996d77f1e54876b90c66fac6da68e4a63.zip
+  ROM_NAME: VOS
+  FIRMWAREZIPNAME: 9776e65996d77f1e54876b90c66fac6da68e4a63.zip
+  ZIP_NAME: VOS-ArisPro-HELIOSGSI-22-11-2020
+  SCRIPT_NAME: NUBIA-VOS-MIUIDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
