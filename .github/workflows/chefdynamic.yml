@@ -6,11 +6,11 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://android.googleapis.com/packages/ota-api/package/9776e65996d77f1e54876b90c66fac6da68e4a63.zip
-  ROM_NAME: VOS
-  FIRMWAREZIPNAME: 9776e65996d77f1e54876b90c66fac6da68e4a63.zip
-  ZIP_NAME: VOS-ArisPro-HELIOSGSI-22-11-2020
-  SCRIPT_NAME: NUBIA-VOS-MIUIDP
+  ROM_URL: https://dl.google.com/dl/android/aosp/bonito-ota-qq3a.200805.001-96efba35.zip
+  ROM_NAME: Pixel
+  FIRMWAREZIPNAME: bonito-ota-qq3a.200805.001-96efba35.zip
+  ZIP_NAME: PixelOS-Pixel3aXL-HELIOSGSI-23-11-2020
+  SCRIPT_NAME: PIXELDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
