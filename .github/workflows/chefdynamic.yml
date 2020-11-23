@@ -9,7 +9,7 @@ env:
   ROM_URL: https://dl.google.com/dl/android/aosp/bonito-ota-qq3a.200805.001-96efba35.zip
   ROM_NAME: Pixel
   FIRMWAREZIPNAME: bonito-ota-qq3a.200805.001-96efba35.zip
-  ZIP_NAME: PixelOS-Pixel3aXL-HELIOSGSI-23-11-2020
+  ZIP_NAME: Pixel-3axl-HELIOSGSI-23-11-2020
   SCRIPT_NAME: PIXELDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
