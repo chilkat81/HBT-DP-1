@@ -6,7 +6,7 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://dl.google.com/dl/android/aosp/bonito-ota-qq3a.200805.001-96efba35.zip
+  ROM_URL: https://pdrive.priyo.workers.dev/0://bonito-ota-qq3a.200805.001-96efba35.zip
   ROM_NAME: Pixel
   FIRMWAREZIPNAME: bonito-ota-qq3a.200805.001-96efba35.zip
   ZIP_NAME: Pixel-3axl-HELIOSGSI-23-11-2020
