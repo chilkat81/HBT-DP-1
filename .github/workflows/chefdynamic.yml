@@ -6,11 +6,11 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://pdrive.priyo.workers.dev/0://bonito-ota-qq3a.200805.001-96efba35.zip
-  ROM_NAME: Pixel
-  FIRMWAREZIPNAME: bonito-ota-qq3a.200805.001-96efba35.zip
-  ZIP_NAME: Pixel-3axl-HELIOSGSI-23-11-2020
-  SCRIPT_NAME: PIXELDP
+  ROM_URL: https://oxygenos.oneplus.net/OnePlus7TProOxygen_14.O.20_OTA_020_all_2010111818_b49ad8c594a04c17.zip
+  ROM_NAME: Oxygen7TPRO
+  FIRMWAREZIPNAME: OnePlus7TProOxygen_14.O.20_OTA_020_all_2010111818_b49ad8c594a04c17.zip
+  ZIP_NAME: OxygenOS-7TPro-HELIOSGSI-24-11-2020
+  SCRIPT_NAME: OOSDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
