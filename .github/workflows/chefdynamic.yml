@@ -6,10 +6,10 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://oxygenos.oneplus.net/OnePlus7TProOxygen_14.O.20_OTA_020_all_2010111818_b49ad8c594a04c17.zip
-  ROM_NAME: Oxygen7TPRO
-  FIRMWAREZIPNAME: OnePlus7TProOxygen_14.O.20_OTA_020_all_2010111818_b49ad8c594a04c17.zip
-  ZIP_NAME: OOS-7TPro-HELIOSGSI-24-11-2020
+  ROM_URL: https://tdrive.elytra8.workers.dev/OnePlus7TOxygen_14.I.21_OTA_021_all_2011052319_9d5413f6c8692a4.zip
+  ROM_NAME: OxygenOS7T
+  FIRMWAREZIPNAME: OnePlus7TOxygen_14.I.21_OTA_021_all_2011052319_9d5413f6c8692a4.zip
+  ZIP_NAME: OOS-7TREQ-HELIOSGSI-25-11-2020
   SCRIPT_NAME: OOSDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
