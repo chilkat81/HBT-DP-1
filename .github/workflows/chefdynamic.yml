@@ -9,7 +9,7 @@ env:
   ROM_URL: https://oxygenos.oneplus.net/OnePlus7TProOxygen_14.O.20_OTA_020_all_2010111818_b49ad8c594a04c17.zip
   ROM_NAME: Oxygen7TPRO
   FIRMWAREZIPNAME: OnePlus7TProOxygen_14.O.20_OTA_020_all_2010111818_b49ad8c594a04c17.zip
-  ZIP_NAME: OxygenOS-7TPro-HELIOSGSI-24-11-2020
+  ZIP_NAME: OOS-7TPro-HELIOSGSI-24-11-2020
   SCRIPT_NAME: OOSDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
