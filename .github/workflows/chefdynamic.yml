@@ -6,11 +6,11 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://tdrive.elytra8.workers.dev/OnePlus7TOxygen_14.I.21_OTA_021_all_2011052319_9d5413f6c8692a4.zip
-  ROM_NAME: OxygenOS7T
-  FIRMWAREZIPNAME: OnePlus7TOxygen_14.I.21_OTA_021_all_2011052319_9d5413f6c8692a4.zip
-  ZIP_NAME: OOS-7TREQ-HELIOSGSI-25-11-2020
-  SCRIPT_NAME: OOSDP
+  ROM_URL: https://tdrive.elytra8.workers.dev/miui_CITRUSEEAGlobal_V12.0.4.0.QJFEUXM_fa235c96ea_10.0.zip
+  ROM_NAME: MIUI
+  FIRMWAREZIPNAME: miui_CITRUSEEAGlobal_V12.0.4.0.QJFEUXM_fa235c96ea_10.0.zip
+  ZIP_NAME: MIUI-m3-HELIOSGSI-30-11-2020
+  SCRIPT_NAME: NUBIA-VOS-MIUIDP
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
