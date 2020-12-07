@@ -7,7 +7,7 @@ on:
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
   ROM_URL: https://tdrive.elytra8.workers.dev/OnePlus7TProOxygen_14.I.21_OTA_021_all_2011052307_6017816412cb4aa4.zip
-  ROM_NAME: OxygenOS7TPRO
+  ROM_NAME: OxygenOS
   FIRMWAREZIPNAME: OnePlus7TProOxygen_14.I.21_OTA_021_all_2011052307_6017816412cb4aa4.zip 
   ZIP_NAME: OOS7TPRO-HELIOSGSI-02-12-2020
   SCRIPT_NAME: dynamic
