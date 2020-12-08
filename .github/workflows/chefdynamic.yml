@@ -10,7 +10,7 @@ env:
   ROM_NAME: MIUI
   FIRMWAREZIPNAME: xiaomi.eu_multi_HMK30_20.12.2_v12-11.zip
   ZIP_NAME: OOS7TPRO-HELIOSGSI-02-12-2020
-  SCRIPT_NAME: sha002
+  SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
   SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
