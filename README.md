@@ -20,10 +20,6 @@ SUPPORTED OEM LIST
 | 8.ZUI                   |
 
 
-SCRIPT NAME TO BE USED EXACTLY LIKE THIS IN THE WORKFLOW
-| --------------------------------------------------------
-| 1.sha010 {will for for all }       |
-
 
 For OnePlus device use the following 
 | -------------------------------- |
