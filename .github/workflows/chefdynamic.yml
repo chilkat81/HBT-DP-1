@@ -6,9 +6,9 @@ on:
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
 env:
-  ROM_URL: https://tdrive.elytra8.workers.dev/xiaomi.eu_multi_HMK30_20.12.2_v12-11.zip
-  ROM_NAME: MIUI
-  FIRMWAREZIPNAME: xiaomi.eu_multi_HMK30_20.12.2_v12-11.zip
+  ROM_URL: https://tdrive.elytra8.workers.dev/VOS%203.0%20Aris%20Lavender%20By%20@ShaRukh007.zip
+  ROM_NAME: VOS
+  FIRMWAREZIPNAME: VOS%203.0%20Aris%20Lavender%20By%20@ShaRukh007.zip
   ZIP_NAME: OOS7TPRO-HELIOSGSI-02-12-2020
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
