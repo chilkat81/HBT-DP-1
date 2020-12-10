@@ -1,7 +1,7 @@
 name: Time to Bake...
 on: 
-  #releasepush:
-    #pushbuild
+  releasepush:
+    pushbuild
   watch: 
       types: [started]
 #######################   CHANGE ONLY ROM_URL,ROM_NAME,FIRMWAREZIPANEM,ZIPNAME,SCRIPT_NAME  ###################################
