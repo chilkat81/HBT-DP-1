@@ -1,9 +1,9 @@
-name: Building GSI..
-
-on:
-  watch:
-    types: [started]
-    
+name: Time to Bake...
+on: 
+  #releasepush:
+    #pushbuild
+  watch: 
+      types: [started]
 env:
   ROM_URL: https://tdrive.elytra8.workers.dev/miui_MONETGlobal_V12.1.1.0.RJIMIXM_ca34271367_11.0.zip
   ROM_NAME: MIUI
