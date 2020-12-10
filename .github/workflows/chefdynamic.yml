@@ -13,13 +13,13 @@ env:
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/helios-gsis/HeliosBakery
-  SFDIRA2: cd /home/pfs/project/helios-gsis/Heliosbakerybills
-  
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/VOS
+  SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
+  SFUSER: ${{ secrets.SFUSER }}
+
 jobs:
     build:
        runs-on: ubuntu-latest
-    
     
        steps:
         - name: Checkout
@@ -74,7 +74,7 @@ jobs:
           run: |   
               cd ErfanGSIs/output
               expect -c " 
-              spawn sftp ridhin@frs.sourceforge.net
+              spawn sftp berkay-gsi@frs.sourceforge.net
               expect \"yes/no\"
               send \"yes\r\"
               expect \"Password\"        
@@ -88,7 +88,7 @@ jobs:
               expect \"sftp>\"
               interact"
               expect -c "
-              spawn sftp ridhin@frs.sourceforge.net
+              spawn sftp berkay-gsi@frs.sourceforge.net
               expect \"Password\"
               send \"${{ secrets.SFGPASS }}\r\"
               expect \"sftp> \"
@@ -100,7 +100,7 @@ jobs:
               expect \"sftp>\"
               interact"
               expect -c "
-              spawn sftp ridhin@frs.sourceforge.net
+              spawn sftp berkay-gsi@frs.sourceforge.net
               expect \"Password\"
               send \"${{ secrets.SFGPASS }}\r\"
               expect \"sftp> \"
@@ -112,3 +112,6 @@ jobs:
               expect \"sftp>\"
               send \"bye\r\"
               interact"  
+       - name: Print build info
+         run: |
+              cat ErfanGSIs/output/*-Aonly-*.txt
