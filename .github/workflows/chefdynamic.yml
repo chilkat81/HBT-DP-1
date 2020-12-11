@@ -12,7 +12,7 @@ env:
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/MIUI
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/VOS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
@@ -45,21 +45,9 @@ jobs:
             interact"
             sudo chmod -R 777 ErfanGSIs
             cd ErfanGSIs
-            sudo bash setup.sh 
-            
-        - name: DOWNLOADING THE FIRMWARE
-          run: cd ErfanGSIs && sudo wget $ROM_URL
-        ##- name: Renaming the download files
-         ## run: cd ErfanGSIs && sudo mv $FIRMWAREZIPNAME payload.zip && ls   
-        - name: GENERATION OF BAKED GOODIES
-          run: | 
-            cd ErfanGSIs && sudo ./$SCRIPT_NAME.sh $ROM_NAME $FIRMWAREZIPNAME && sudo umount system && sudo rm -rf system
-            
-            
-        - name: MOUNTING THE SYSTEM
-          run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
-         
-        - name: MAKING THE COOKIES
+            sudo bash setup.sh
+             
+        - name: Make Dynamic GSI
           run: cd ErfanGSIs && sudo ./url2GSI.sh $ROM_URL $ROM_NAME -d  
        
         - name: Zipping BOTH COOKIES
