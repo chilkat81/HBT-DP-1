@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://cold-sun-8274.isohel.workers.dev/Redmi%20Note%208/Project%20Sakura/Vanilla/ProjectSakura-3.R.BETA3-VANILLA-20201208-0601-ginkgo-UNOFFICIAL.zip
-  ROM_NAME: Generic:ProjectSakura
-  FIRMWAREZIPNAME: ProjectSakura-3.R.BETA3-VANILLA-20201208-0601-ginkgo-UNOFFICIAL.zip
-  ZIP_NAME: ProjectSakura-3-R
+  ROM_URL: https://oxygenos.oneplus.net/OnePlus8TOxygen_15.O.20_OTA_0200_all_2011132216_a6374d5b0e134ca7.zip
+  ROM_NAME: OxygenOS:OxygenOS-11-8T
+  FIRMWAREZIPNAME: OnePlus8TOxygen_15.O.20_OTA_0200_all_2011132216_a6374d5b0e134ca7.zip
+  ZIP_NAME: OxygenOS-11-8T
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/ProjectSakura
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/OxygenOS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
