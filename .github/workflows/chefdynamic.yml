@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://tdrive.elytra8.workers.dev/L78032_CN_SECURE_USER_Q00145.1_Q_ZUI_11.5.247_ST_200424_qpst.zip
-  ROM_NAME: ZUI
-  FIRMWAREZIPNAME: L78032_CN_SECURE_USER_Q00145.1_Q_ZUI_11.5.247_ST_200424_qpst.zip
-  ZIP_NAME: ZUI-11-5
+  ROM_URL: https://mva1.androidfilehost.com/dl/m7kbrMGlNQgyn_WB6NvJmg/1607812127/8889791610682898363/XT2075-3-DS-NAIRO_RETAIL_QPN30.33-27-1_subsidy-DEFAULT_regulatory-DEFAULT_CFC.xml.zip
+  ROM_NAME: MOTO
+  FIRMWAREZIPNAME: XT2075-3-DS-NAIRO_RETAIL_QPN30.33-27-1_subsidy-DEFAULT_regulatory-DEFAULT_CFC.xml.zip
+  ZIP_NAME: MOTO-TEST
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/ZUI
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/MOTO
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
