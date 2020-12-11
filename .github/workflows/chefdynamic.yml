@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://tdrive.elytra8.workers.dev/miui_MONETGlobal_V12.1.1.0.RJIMIXM_ca34271367_11.0.zip
-  ROM_NAME: MIUI
+  ROM_URL: https://mirrors.lolinet.com/firmware/lenovo/l79031/L79031_EE_SECURE_USER_Q00114.1a_Q_ROW_12.0.086_ST_201012_qpst.zip
+  ROM_NAME: ZUI
   FIRMWAREZIPNAME: miui_MONETGlobal_V12.1.1.0.RJIMIXM_ca34271367_11.0.zip
-  ZIP_NAME: MIUIMONET12010-HBTRIA-10-12-2020
+  ZIP_NAME: L79031_EE_SECURE_USER_Q00114.1a_Q_ROW_12.0.086_ST_201012_qpst
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/VOS
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/ZUI
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
