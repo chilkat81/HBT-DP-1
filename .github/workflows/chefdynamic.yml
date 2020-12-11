@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://mva1.androidfilehost.com/dl/m7kbrMGlNQgyn_WB6NvJmg/1607812127/8889791610682898363/XT2075-3-DS-NAIRO_RETAIL_QPN30.33-27-1_subsidy-DEFAULT_regulatory-DEFAULT_CFC.xml.zip
-  ROM_NAME: Moto
-  FIRMWAREZIPNAME: XT2075-3-DS-NAIRO_RETAIL_QPN30.33-27-1_subsidy-DEFAULT_regulatory-DEFAULT_CFC.xml.zip
-  ZIP_NAME: MOTO-TEST
+  ROM_URL: https://mpl1.androidfilehost.com/dl/zCJIpBuIc-f7ebtk_9fr_A/1607813673/17248734326145681616/MIUIPLUS-G%C4%B0NGKO_note8_20.12.9_v12-10.zip
+  ROM_NAME: MIUI
+  FIRMWAREZIPNAME: MIUIPLUS-GİNGKO_note8_20.12.9_v12-10.zip
+  ZIP_NAME: MMIUIPLUS-20-12-9
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/MOTO
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/MIUI-MODS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
