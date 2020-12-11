@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://tdrive.elytra8.workers.dev/OnePlus7Oxygen_14.P.31_OTA_031_all_2011052313_afdc9.zip
-  ROM_NAME: OxygenOS
-  FIRMWAREZIPNAME: OnePlus7Oxygen_14.P.31_OTA_031_all_2011052313_afdc9.zip
-  ZIP_NAME: OxygenOS-11-12-20
+  ROM_URL: https://tdrive.elytra8.workers.dev/OneUI%202.1%20for%20RedmiNote9S%20TestBuild%20-%20Jul29.zip
+  ROM_NAME: OneUI
+  FIRMWAREZIPNAME: OneUI 2.1 for RedmiNote9S TestBuild - Jul29.zip
+  ZIP_NAME: OneUI-2-1-RN9S
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/OxygenOS
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/OneUI
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
