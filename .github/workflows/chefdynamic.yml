@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://mpl1.androidfilehost.com/dl/zCJIpBuIc-f7ebtk_9fr_A/1607813673/17248734326145681616/MIUIPLUS-G%C4%B0NGKO_note8_20.12.9_v12-10.zip
-  ROM_NAME: MIUI
-  FIRMWAREZIPNAME: MIUIPLUS-GİNGKO_note8_20.12.9_v12-10.zip
-  ZIP_NAME: MMIUIPLUS-20-12-9
+  ROM_URL: https://jaist.dl.sourceforge.net/project/lineage-fe/X00TD/LineageFE-v10.69-20201013-X00TD-Isotope.zip
+  ROM_NAME: Generic:LineageFE
+  FIRMWAREZIPNAME: LineageFE-v10.69-20201013-X00TD-Isotope.zip
+  ZIP_NAME: LineageFE-v10-69
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/MIUI-MODS
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/LineageOS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
