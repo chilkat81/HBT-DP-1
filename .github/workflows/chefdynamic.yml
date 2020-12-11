@@ -6,7 +6,7 @@ on:
       types: [started]
 env:
   ROM_URL: https://mva1.androidfilehost.com/dl/m7kbrMGlNQgyn_WB6NvJmg/1607812127/8889791610682898363/XT2075-3-DS-NAIRO_RETAIL_QPN30.33-27-1_subsidy-DEFAULT_regulatory-DEFAULT_CFC.xml.zip
-  ROM_NAME: MOTO
+  ROM_NAME: Moto
   FIRMWAREZIPNAME: XT2075-3-DS-NAIRO_RETAIL_QPN30.33-27-1_subsidy-DEFAULT_regulatory-DEFAULT_CFC.xml.zip
   ZIP_NAME: MOTO-TEST
   SCRIPT_NAME: sha010
