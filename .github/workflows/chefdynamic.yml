@@ -60,7 +60,7 @@ jobs:
           run: cd ErfanGSIs/cache && sudo mkdir dynamic && sudo mount -o ro system.img dynamic 
          
         - name: MAKING THE COOKIES
-          run: cd ErfanGSIs && sudo ./url2GSI.sh cache/dynamic $ROM_NAME  
+          run: cd ErfanGSIs && sudo ./url2GSI.sh $ROM_URL $ROM_NAME -d  
        
         - name: Zipping BOTH COOKIES
           run: |
