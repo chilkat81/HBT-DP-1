@@ -5,10 +5,10 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://oxygenos.oneplus.net/OnePlus8TOxygen_15.O.20_OTA_0200_all_2011132216_a6374d5b0e134ca7.zip
-  ROM_NAME: OxygenOS:OxygenOS-11-8T
-  FIRMWAREZIPNAME: OnePlus8TOxygen_15.O.20_OTA_0200_all_2011132216_a6374d5b0e134ca7.zip
-  ZIP_NAME: OxygenOS-11-8T
+  ROM_URL: https://tdrive.elytra8.workers.dev/OnePlus7Oxygen_14.P.31_OTA_031_all_2011052313_afdc9.zip
+  ROM_NAME: OxygenOS
+  FIRMWAREZIPNAME: OnePlus7Oxygen_14.P.31_OTA_031_all_2011052313_afdc9.zip
+  ZIP_NAME: OxygenOS-11-12-20
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
