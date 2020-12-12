@@ -5,10 +5,10 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://mirror.rk585.wtf/OnePlus7T_McLaren_OB18_X01BD_2-12-2020.zip
-  ROM_NAME: OxygenOS:OxygenOS-MCLAREN-OB18
-  FIRMWAREZIPNAME: OnePlus7T_McLaren_OB18_X01BD_2-12-2020.zip
-  ZIP_NAME: OxygenOS-MCLAREN-OB18
+  ROM_URL: https://tdrive.elytra8.workers.dev/OP7PRO%20CyberPunk+McLaren%20Edition%20For%20Lavender.zip
+  ROM_NAME: OxygenOS:OxygenOS-MCLAREN+Cyberpunk-Edition
+  FIRMWAREZIPNAME: OP7PRO CyberPunk+McLaren Edition For Lavender.zip
+  ZIP_NAME: OxygenOS-MCLAREN+Cyberpunk-Edition
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
