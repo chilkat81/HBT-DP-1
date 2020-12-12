@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://jaist.dl.sourceforge.net/project/lineage-fe/X00TD/LineageFE-v10.69-20201013-X00TD-Isotope.zip
-  ROM_NAME: Generic:LineageFE
-  FIRMWAREZIPNAME: LineageFE-v10.69-20201013-X00TD-Isotope.zip
-  ZIP_NAME: LineageFE-v10-69
+  ROM_URL: https://mirrors.lolinet.com/firmware/moto/sofiar/official/RETEU/XT2041-3_SOFIAR_RETEU_10_QPES30.79-124-7_subsidy-DEFAULT_regulatory-DEFAULT_CFC.xml.zip
+  ROM_NAME: Moto
+  FIRMWAREZIPNAME: XT2041-3_SOFIAR_RETEU_10_QPES30.79-124-7_subsidy-DEFAULT_regulatory-DEFAULT_CFC.xml.zip
+  ZIP_NAME: Moto
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/LineageOS
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/MOTO
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
