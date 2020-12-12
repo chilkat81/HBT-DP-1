@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://mirrors.lolinet.com/firmware/moto/sofiar/official/RETEU/XT2041-3_SOFIAR_RETEU_10_QPES30.79-124-7_subsidy-DEFAULT_regulatory-DEFAULT_CFC.xml.zip
-  ROM_NAME: Moto
-  FIRMWAREZIPNAME: XT2041-3_SOFIAR_RETEU_10_QPES30.79-124-7_subsidy-DEFAULT_regulatory-DEFAULT_CFC.xml.zip
-  ZIP_NAME: Moto
+  ROM_URL: https://download.wetransfer.com//eu2/056f51fee42b67ef8f4f74b712cd38e520201212094641/107fa3810cd940a875934aca5064e1802e877216/RROS-Q-8.6.5-20201211-ginkgo-Official.zip?cf=y&token=eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDc3NjcxOTAsInVuaXF1ZSI6IjA1NmY1MWZlZTQyYjY3ZWY4ZjRmNzRiNzEyY2QzOGU1MjAyMDEyMTIwOTQ2NDEiLCJmaWxlbmFtZSI6IlJST1MtUS04LjYuNS0yMDIwMTIxMS1naW5rZ28tT2ZmaWNpYWwuemlwIiwid2F5YmlsbF91cmwiOiJodHRwOi8vcHJvZHVjdGlvbi5iYWNrZW5kLnNlcnZpY2UuZXUtd2VzdC0xLnd0OjkyOTIvd2F5YmlsbC92MS9zYXJrYXIvNjA3YjcyYWY2MTE4MWM5N2UzNTg2ODVhZGE1ZDE5OWY1MWM1YjhiNDJlZmFjMzQ2N2VhZjhhNDQwNTk4N2Q3NzM3MjY0MDFhYTE3Y2Y5YzU0MjE3ZjQiLCJmaW5nZXJwcmludCI6IjEwN2ZhMzgxMGNkOTQwYTg3NTkzNGFjYTUwNjRlMTgwMmU4NzcyMTYiLCJjYWxsYmFjayI6IntcImZvcm1kYXRhXCI6e1wiYWN0aW9uXCI6XCJodHRwOi8vcHJvZHVjdGlvbi5mcm9udGVuZC5zZXJ2aWNlLmV1LXdlc3QtMS53dDozMDAwL3dlYmhvb2tzL2JhY2tlbmRcIn0sXCJmb3JtXCI6e1widHJhbnNmZXJfaWRcIjpcIjA1NmY1MWZlZTQyYjY3ZWY4ZjRmNzRiNzEyY2QzOGU1MjAyMDEyMTIwOTQ2NDFcIixcImRvd25sb2FkX2lkXCI6MTA5NzMzMTkxNzB9fSJ9.VPYwPpTmX5P069_8f3vnPCMwg1cHmrQauOeCCCRKHZM
+  ROM_NAME: Generic:RROS-Q-8.6.5
+  FIRMWAREZIPNAME: RROS-Q-8.6.5-20201210-santoni-Official.zip
+  ZIP_NAME: RROS-Q-8.6.5
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/MOTO
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/ResurrectionRemix
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
