@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://tdrive.elytra8.workers.dev/OP7PRO%20CyberPunk+McLaren%20Edition%20For%20Lavender.zip
-  ROM_NAME: OxygenOS:OxygenOS-MCLAREN+Cyberpunk-Edition
-  FIRMWAREZIPNAME: OP7PRO CyberPunk+McLaren Edition For Lavender.zip
-  ZIP_NAME: OxygenOS-MCLAREN+Cyberpunk-Edition
+  ROM_URL: https://gdmbd.sasohan.workers.dev/MIUI_NUSANTARA_20.10.30_HMNOTE5_12-10_Official.zip
+  ROM_NAME: MIUI:MIUI_NUSANTARA_20-10-30
+  FIRMWAREZIPNAME: MIUI_NUSANTARA_20.10.30_HMNOTE5_12-10_Official.zip
+  ZIP_NAME: MIUI_NUSANTARA_20-10-30
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/OxygenOS
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/MIUI-MODS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
