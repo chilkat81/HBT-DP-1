@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://netix.dl.sourceforge.net/project/havoc-os/oneplus3/Beta/Havoc-OS-v4.0-20200924-oneplus3-Beta.zip
-  ROM_NAME: Generic:HavocOS-4-0-Beta
-  FIRMWAREZIPNAME: Havoc-OS-v4.0-20200924-oneplus3-Beta.zip
-  ZIP_NAME: HavocOS-4-0-Beta
+  ROM_URL: http://download1271.mediafire.com/n2aicmvq5cag/venode4ewya2wpd/Godness+Q+7870.zip
+  ROM_NAME: OneUI:OneUI-Godness-2-5
+  FIRMWAREZIPNAME: Godness Q 7870.zip
+  ZIP_NAME: OneUI-Godness-2-5
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/HavocOS
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/OneUI
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
