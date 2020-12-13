@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://kamiui.ml/redmi4x/Redmi%20Note%204%20resources/MIUI12/MIUICX_mido_20.11.18.zip
-  ROM_NAME: MIUI:MIUICX_20-11-18
-  FIRMWAREZIPNAME: MIUICX_mido_20.11.18.zip
-  ZIP_NAME: IUICX_20-11-18
+  ROM_URL: http://fota-secure-dn.ospserver.net/firmware/XEU/SM-G973F/nspx/3d7ec99e9fee43a6b565547331ac3f3a.bin?px-time=600d3f95&px-hash=78145a5f8a945c059672847362b20492&px-wid=78220201125-WCA18849900&px-wctime=2020-11-25%2009:36:20&px-unum=&px-nb=UGtezEZ854jbmFcvWGxLEA==&px-nac=6s3wAaU7MHyZGLScDp+hMb/kXuKVLozycV1Xe69z/g0=
+  ROM_NAME: OneUI:OneUI-3-0
+  FIRMWAREZIPNAME: 3d7ec99e9fee43a6b565547331ac3f3a.bin
+  ZIP_NAME: OneUI-3-0
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/MIUI-MODS
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/OneUI
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
