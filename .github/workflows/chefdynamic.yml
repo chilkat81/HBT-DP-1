@@ -6,9 +6,9 @@ on:
       types: [started]
 env:
   ROM_URL: https://netix.dl.sourceforge.net/project/havoc-os/oneplus3/Beta/Havoc-OS-v4.0-20200924-oneplus3-Beta.zip
-  ROM_NAME: Generic:HavocOS-4-0
+  ROM_NAME: Generic:HavocOS-4-0-Beta
   FIRMWAREZIPNAME: Havoc-OS-v4.0-20200924-oneplus3-Beta.zip
-  ZIP_NAME: HavocOS-4-0
+  ZIP_NAME: HavocOS-4-0-Beta
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
