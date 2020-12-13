@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://mpl1.androidfilehost.com/dl/8MnwPhdDKc1H8lcsvZXK3g/1607966085/17248734326145681052/MMX_2.2.0_davinci-davinciin_20.12.10_v12-11.zip?
-  ROM_NAME: MIUI:MMX_2-2-0_20-12-10
-  FIRMWAREZIPNAME: MMX_2.2.0_davinci-davinciin_20.12.10_v12-11.zip
-  ZIP_NAME: MMX_2-2-0_20-12-10
+  ROM_URL: https://download858.mediafire.com/afu6us09cxug/81ypx3oow7w1ygw/Miroom_Remaster_24.11.20_zChip.zip
+  ROM_NAME: MIUI:Miroom_Remaster_24-11-20_zChip
+  FIRMWAREZIPNAME: Miroom_Remaster_24.11.20_zChip.zip
+  ZIP_NAME: Miroom_Remaster_24-11-20_zChip
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/OneUI
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/MIUI-MODS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
