@@ -5,10 +5,10 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://download858.mediafire.com/afu6us09cxug/81ypx3oow7w1ygw/Miroom_Remaster_24.11.20_zChip.zip
-  ROM_NAME: MIUI:Miroom_Remaster_24-11-20_zChip
-  FIRMWAREZIPNAME: Miroom_Remaster_24.11.20_zChip.zip
-  ZIP_NAME: Miroom_Remaster_24-11-20_zChip
+  ROM_URL: https://ota.revtechs.me/rom/MI8Lite/OneOS_MI8Lite_20.11.17_v12-10.zip
+  ROM_NAME: MIUI:OneOS_20-11-17
+  FIRMWAREZIPNAME: OneOS_MI8Lite_20.11.17_v12-10.zip
+  ZIP_NAME: OneOS_20-11-17
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
