@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: http://download1271.mediafire.com/n2aicmvq5cag/venode4ewya2wpd/Godness+Q+7870.zip
-  ROM_NAME: OneUI:OneUI-Godness-2-5
-  FIRMWAREZIPNAME: Godness Q 7870.zip
-  ZIP_NAME: OneUI-Godness-2-5
+  ROM_URL: https://otafsg1.h2os.com/patch/amazone2/GLO/OnePlus8Oxygen/OnePlus8Oxygen_15.O.30_GLO_0300_2010031624/OnePlus8Oxygen_15.O.30_OTA_0300_all_2010031624_c5e68b42b3325.zip
+  ROM_NAME: OxygenOS:OxygenOS-Android-11
+  FIRMWAREZIPNAME: OnePlus8Oxygen_15.O.30_OTA_0300_all_2010031624_c5e68b42b3325.zip
+  ZIP_NAME: OxygenOS-Android-11
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/OneUI
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/OxygenOS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
