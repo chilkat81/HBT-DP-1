@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://bigota.d.miui.com/V12.0.1.0.QFGMIXM/miui_LAVENDERGlobal_V12.0.1.0.QFGMIXM_c3fa7eb012_10.0.zip
-  ROM_NAME: MIUI:miui_LAVENDERGlobal_V12-0-1-0
-  FIRMWAREZIPNAME: miui_LAVENDERGlobal_V12.0.1.0.QFGMIXM_c3fa7eb012_10.0.zip
-  ZIP_NAME: miui_LAVENDERGlobal_V12-0-1-0
+  ROM_URL: https://kamiui.ml/redmi4x/Redmi%20Note%204%20resources/MIUI12/MIUICX_mido_20.11.18.zip
+  ROM_NAME: MIUI:MIUICX_20-11-18
+  FIRMWAREZIPNAME: MIUICX_mido_20.11.18.zip
+  ZIP_NAME: IUICX_20-11-18
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/MIUI
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/MIUI-MODS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
