@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://ota.revtechs.me/rom/MI8Lite/OneOS_MI8Lite_20.11.17_v12-10.zip
-  ROM_NAME: MIUI:OneOS_20-11-17
-  FIRMWAREZIPNAME: OneOS_MI8Lite_20.11.17_v12-10.zip
-  ZIP_NAME: OneOS_20-11-17
+  ROM_URL: https://netix.dl.sourceforge.net/project/havoc-os/oneplus3/Beta/Havoc-OS-v4.0-20200924-oneplus3-Beta.zip
+  ROM_NAME: Generic:HavocOS-4-0
+  FIRMWAREZIPNAME: Havoc-OS-v4.0-20200924-oneplus3-Beta.zip
+  ZIP_NAME: HavocOS-4-0
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/MIUI-MODS
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/HavocOS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
