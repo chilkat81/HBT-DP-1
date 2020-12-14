@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://s228vla.storage.yandex.net/rdisk/f759f8e1cf392ff474bec10a4a2d7d43f97552787f75b954115cf2fecd9c8268/5fd78a28/Av7yVleztnw7sFG-Vu0QQzZM6ctgANi29v-onA8HNjx14NWYrAKcdSB_reI4bzZR2uSI8733OksBQ_AWbdkmlA==?uid=0&filename=MIUITR_20.11.19_MI8LITE_PLATINA_M12-A10.zip&disposition=attachment&hash=WyMJkuJ99zXLJi0Sy%2BpAcIlWJybrQAM7mVt%2BMRvM7fxnqlI/shNzN7FGDkpHmitSq/J6bpmRyOJonT3VoXnDag%3D%3D&limit=0&content_type=application%2Fzip&owner_uid=226448624&fsize=1780103970&hid=a3063d15d1e54ee5aa0a72e800d9d3cc&media_type=compressed&tknv=v2&rtoken=xBsiB8obtulP&force_default=no&ycrid=na-ac6b5c6f19f1497c8f1ab17d8d48d118-downloader14f&ts=5b66e9fd8da00&s=473a53625882532cb64107b2a90521f78fcc07c3b5d894f9635e234d08e7276a&pb=U2FsdGVkX18lolxxzM2UNVs44FC_CLxLULzW8lsMgscWl9FtQ0HHOnE3TsD_N3dgKVs_qYL0lVmIv5ecLSln1C90CiJK-yEq-k7-EiuBMbw
-  ROM_NAME: MIUI:MIUITR_20-11-19
-  FIRMWAREZIPNAME: MIUITR_20.11.19_MI8LITE_PLATINA_M12-A10.zip
-  ZIP_NAME: MIUITR_20-11-19
+  ROM_URL: https://tdrive.elytra8.workers.dev/Oneplus%207T%20Cyberpunk%20Edition.zip
+  ROM_NAME: OxygenOS:OxygeOS-CyberpunkEdition
+  FIRMWAREZIPNAME: Oneplus 7T Cyberpunk Edition.zip
+  ZIP_NAME: OxygeOS-CyberpunkEdition
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/MIUI-MODS
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/OxygenOS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
