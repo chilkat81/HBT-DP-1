@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://tdrive.elytra8.workers.dev/Oneplus%207T%20Cyberpunk%20Edition.zip
-  ROM_NAME: OxygenOS:OxygeOS-CyberpunkEdition
-  FIRMWAREZIPNAME: Oneplus 7T Cyberpunk Edition.zip
-  ZIP_NAME: OxygeOS-CyberpunkEdition
+  ROM_URL: https://netix.dl.sourceforge.net/project/blissroms/Q/pyxis/Bliss-v12.12-pyxis-OFFICIAL-20201115.zip
+  ROM_NAME: Generic:BlissOS-v12-8
+  FIRMWAREZIPNAME: Bliss-v12.12-pyxis-OFFICIAL-20201115.zip
+  ZIP_NAME: BlissOS-v12-8
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/OxygenOS
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/BlissOS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
