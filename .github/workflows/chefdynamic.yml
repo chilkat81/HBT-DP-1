@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://netix.dl.sourceforge.net/project/blissroms/Q/pyxis/Bliss-v12.12-pyxis-OFFICIAL-20201115.zip
-  ROM_NAME: Generic:BlissOS-v12-8
-  FIRMWAREZIPNAME: Bliss-v12.12-pyxis-OFFICIAL-20201115.zip
-  ZIP_NAME: BlissOS-v12-8
+  ROM_URL: https://iweb.dl.sourceforge.net/project/makhk/Lavender/DotOSv5/dotOS-R-v5.0.0-lavender-UNOFFICIAL-20201011-0547.zip
+  ROM_NAME: Generic:DotOS-5-0
+  FIRMWAREZIPNAME: dotOS-R-v5.0.0-lavender-UNOFFICIAL-20201011-0547.zip
+  ZIP_NAME: DotOS-5-0
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/BlissOS
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/DotOS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
