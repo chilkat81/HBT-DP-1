@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://iweb.dl.sourceforge.net/project/makhk/Lavender/DotOSv5/dotOS-R-v5.0.0-lavender-UNOFFICIAL-20201011-0547.zip
-  ROM_NAME: Generic:DotOS-5-0
-  FIRMWAREZIPNAME: dotOS-R-v5.0.0-lavender-UNOFFICIAL-20201011-0547.zip
-  ZIP_NAME: DotOS-5-0
+  ROM_URL: https://mor1.androidfilehost.com/dl/tA0Km3p_olvFBOe55uKZtg/1608152000/17248734326145680723/xiaomi.eu_multi_HMNote8_20.12.9_v12-10.zip
+  ROM_NAME: MIUI:XiaomiEU-20-12-9
+  FIRMWAREZIPNAME: xiaomi.eu_multi_HMNote8_20.12.9_v12-10.zip
+  ZIP_NAME: XiaomiEU-20-12-9
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/DotOS
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/MIUI
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
