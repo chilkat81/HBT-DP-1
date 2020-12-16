@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://netix.dl.sourceforge.net/project/cherish-os/device/X00TD/Cherish-OS-v2.1-20201215-1205-X00TD-OFFICIAL-Vanilla.zip
-  ROM_NAME: Generic:Cherish-OS-v2-1
-  FIRMWAREZIPNAME: Cherish-OS-v2.1-20201215-1205-X00TD-OFFICIAL-Vanilla.zip
-  ZIP_NAME: Cherish-OS-v2-1
+  ROM_URL: https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE2MDgwNTE1MjIiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6ImE3NmVhYzg1MTgyMGY1YjcyZjZlOWY0ZTNlZjZjOTY3ZjQ2Y2IxMTBjN2RlMmE5MzE3OGYzYzczNDk4MmMyYjVjYzk0YjI1YmY3NzgxN2ZjMTE5NTFjMTgzOTU0NGVjZDVhNTI2MmFmZmRhYzdiMTdkZDkxNTJiN2M3ZmFhMjY2IiwidCI6MTYwODE1MDMwOCwic3RmcCI6ImNkNmQ4NzFjMWFiYWJmMmRmMDUwOWVjODEzYTBhN2ZhIiwic3RpcCI6Ijk1LjEyLjEyMy4xNDAifQ.7gDTj0Q9rY0YIWIigCmxCzC6DkkqqmD5qvyED_NWKzE/Corvus_v12.0-R-Beta-Athrill-ginkgo-15122020-Official-1420.zip
+  ROM_NAME: Generic:Corvus_v12-0-R-Beta-Athrill
+  FIRMWAREZIPNAME: Corvus_v12.0-R-Beta-Athrill-ginkgo-15122020-Official-1420.zip
+  ZIP_NAME: Corvus_v12-0-R-Beta-Athrill
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/CherishOS
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/CorvusOS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
