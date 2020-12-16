@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://mor1.androidfilehost.com/dl/tA0Km3p_olvFBOe55uKZtg/1608152000/17248734326145680723/xiaomi.eu_multi_HMNote8_20.12.9_v12-10.zip
-  ROM_NAME: MIUI:XiaomiEU-20-12-9
-  FIRMWAREZIPNAME: xiaomi.eu_multi_HMNote8_20.12.9_v12-10.zip
-  ZIP_NAME: XiaomiEU-20-12-9
+  ROM_URL: https://download2270.mediafire.com/4xvmdcsamfjg/blie1brwtjx0o31/RicksROM-12-10-20_2.zip
+  ROM_NAME: OneUI:OneUI-3-0-RicksROM
+  FIRMWAREZIPNAME: RicksROM-12-10-20_2.zip
+  ZIP_NAME: OneUI-3-0-RicksROM
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/MIUI
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/OneUI
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
