@@ -5,10 +5,10 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://download2270.mediafire.com/4xvmdcsamfjg/blie1brwtjx0o31/RicksROM-12-10-20_2.zip
-  ROM_NAME: OneUI:OneUI-3-0-RicksROM
-  FIRMWAREZIPNAME: RicksROM-12-10-20_2.zip
-  ZIP_NAME: OneUI-3-0-RicksROM
+  ROM_URL: https://mva2.androidfilehost.com/dl/nTxy8wfaPnk88qtgf06KEw/1608204231/10763459528675597115/AkimiOS%E9%8A%80%E6%B2%B3+v2+MN.zip
+  ROM_NAME: OneUI:OneUI-2-5
+  FIRMWAREZIPNAME: AkimiOS銀河+v2+MN.zip
+  ZIP_NAME: AkimiOS-OneUI2-5
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
