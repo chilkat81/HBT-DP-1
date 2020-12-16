@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://mva1.androidfilehost.com/dl/Yi03StViq0TiQijE4ayorw/1608208834/17248734326145682796/omni-10-20201213-lavender-HOMEMADE.zip
-  ROM_NAME: Generic:OmniRom-Homemade-Android10
-  FIRMWAREZIPNAME: omni-10-20201213-lavender-HOMEMADE.zip
-  ZIP_NAME: OmniRom-Homemade-Android10
+  ROM_URL: https://netix.dl.sourceforge.net/project/cherish-os/device/X00TD/Cherish-OS-v2.1-20201215-1205-X00TD-OFFICIAL-Vanilla.zip
+  ROM_NAME: Generic:Cherish-OS-v2-1
+  FIRMWAREZIPNAME: Cherish-OS-v2.1-20201215-1205-X00TD-OFFICIAL-Vanilla.zip
+  ZIP_NAME: Cherish-OS-v2-1
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/OmniRom
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/CherishOS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
