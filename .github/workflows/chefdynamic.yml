@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://netactuate.dl.sourceforge.net/project/bootleggers-future/enchilada/BootleggersROM-Rimbon4enchilada.5.7-Alpha-Testing-20201125-022329.zip
-  ROM_NAME: Generic:Bootleggers_5-7-Alpha-Android11
-  FIRMWAREZIPNAME: BootleggersROM-Rimbon4begonia.5.7-Alpha-Testing-20201201-061454.zip
-  ZIP_NAME: Bootleggers_5-7-Alpha-Android11
+  ROM_URL: https://media.rex007.workers.dev/0:/DerpFest-11-Official-Alpha-tulip-20201214-1047.zip
+  ROM_NAME: Generic:DerpFest-OPLauncher-GSI-Android11-Alpha
+  FIRMWAREZIPNAME: DerpFest-11-Official-Alpha-tulip-20201214-1047.zip
+  ZIP_NAME: DerpFest-OPLauncher-GSI-Android11-Alpha
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/Bootleggers
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/DerpFest
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
