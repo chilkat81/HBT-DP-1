@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://pilotfiber.dl.sourceforge.net/project/bootleggers-unofficial/BootleggersROM-Rimbon4sakura.5.7-Alpha-Testing-20201128-143942.zip
-  ROM_NAME: Generic:Bootleggers_5-7-Alpha-Android11
-  FIRMWAREZIPNAME: BootleggersROM-Rimbon4sakura.5.7-Alpha-Testing-20201128-143942.zip
-  ZIP_NAME: Bootleggers_5-7-Alpha-Android11
+  ROM_URL: https://downloads.msmxtended.org/ginkgo/Xtended-XR-v2.0-ginkgo-OFFICIAL-20201114.zip
+  ROM_NAME: Generic:Xtended-XR-v2-0
+  FIRMWAREZIPNAME: Xtended-XR-v2.0-ginkgo-OFFICIAL-20201114.zip
+  ZIP_NAME: Xtended-XR-v2-0
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/Bootleggers
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/MsmXtended
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
