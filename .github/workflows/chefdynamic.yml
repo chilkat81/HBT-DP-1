@@ -5,7 +5,7 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://jztkft.dl.sourceforge.net/project/bootleggers-begonia/BootleggersROM-Rimbon4begonia.5.7-Alpha-Testing-20201201-061454.zip
+  ROM_URL: https://netactuate.dl.sourceforge.net/project/bootleggers-future/enchilada/BootleggersROM-Rimbon4enchilada.5.7-Alpha-Testing-20201125-022329.zip
   ROM_NAME: Generic:Bootleggers_5-7-Alpha-Android11
   FIRMWAREZIPNAME: BootleggersROM-Rimbon4begonia.5.7-Alpha-Testing-20201201-061454.zip
   ZIP_NAME: Bootleggers_5-7-Alpha-Android11
