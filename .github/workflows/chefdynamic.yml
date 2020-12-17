@@ -5,9 +5,9 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://phoenixnap.dl.sourceforge.net/project/yusuf/bootleg/BootleggersROM-Rimbon4davinci.5.7-Alpha-Testing-20201028-190652.zip
+  ROM_URL: https://pilotfiber.dl.sourceforge.net/project/bootleggers-unofficial/BootleggersROM-Rimbon4sakura.5.7-Alpha-Testing-20201128-143942.zip
   ROM_NAME: Generic:Bootleggers_5-7-Alpha-Android11
-  FIRMWAREZIPNAME: BootleggersROM-Rimbon4davinci.5.7-Alpha-Testing-20201028-190652.zip
+  FIRMWAREZIPNAME: BootleggersROM-Rimbon4sakura.5.7-Alpha-Testing-20201128-143942.zip
   ZIP_NAME: Bootleggers_5-7-Alpha-Android11
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
