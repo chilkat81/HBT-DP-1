@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://downloads.msmxtended.org/ginkgo/Xtended-XR-v2.0-ginkgo-OFFICIAL-20201114.zip
-  ROM_NAME: Generic:Xtended-XR-v2-0
-  FIRMWAREZIPNAME: Xtended-XR-v2.0-ginkgo-OFFICIAL-20201114.zip
-  ZIP_NAME: Xtended-XR-v2-0
+  ROM_URL: https://tdrive.elytra8.workers.dev/DerpFest-11-Official-Alpha-daisy-20201130-0519.zip
+  ROM_NAME: Generic:DerpFest-Andoid11-Alpha-Lavender-Gsi
+  FIRMWAREZIPNAME: DerpFest-11-Official-Alpha-daisy-20201130-0519.zip
+  ZIP_NAME: DerpFest-Andoid11-Alpha-Lavender-Gsi
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/MsmXtended
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/Derpfest
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
