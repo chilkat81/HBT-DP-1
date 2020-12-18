@@ -6,7 +6,7 @@ on:
       types: [started]
 env:
   ROM_URL: https://downloads.lg-firmwares.com/get/065a6ad2b228b7bb16c620dc0f25f0d7/G810EAW20a_00_OPEN_EU_DS_OP_0811.kdz
-  ROM_NAME: LGUX-LGUX-TEST
+  ROM_NAME: LGUX:LGUX-TEST
   FIRMWAREZIPNAME: G810EAW20a_00_OPEN_EU_DS_OP_0811 (1).kdz
   ZIP_NAME: LGUX-TEST
   SCRIPT_NAME: sha010
