@@ -5,10 +5,10 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://kamiui.ml/redmi4x/Redmi%20Note%204%20resources/MIUI12/MIUICX_mido_20.11.18.zip
-  ROM_NAME: MIUI:MIUICX_20-11-18
-  FIRMWAREZIPNAME: MIUICX_mido_20.11.18.zip
-  ZIP_NAME: MIUICX_20-11-18
+  ROM_URL: https://downloads.lg-firmwares.com/get/065a6ad2b228b7bb16c620dc0f25f0d7/G810EAW20a_00_OPEN_EU_DS_OP_0811.kdz
+  ROM_NAME: LGUX-LGUX-TEST
+  FIRMWAREZIPNAME: G810EAW20a_00_OPEN_EU_DS_OP_0811 (1).kdz
+  ZIP_NAME: LGUX-TEST
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
