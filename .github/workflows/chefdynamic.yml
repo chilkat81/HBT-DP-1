@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://downloads.lg-firmwares.com/get/065a6ad2b228b7bb16c620dc0f25f0d7/G810EAW20a_00_OPEN_EU_DS_OP_0811.kdz
-  ROM_NAME: LGUX:LGUX-TEST
-  FIRMWAREZIPNAME: G810EAW20a_00_OPEN_EU_DS_OP_0811 (1).kdz
-  ZIP_NAME: LGUX-TEST
+  ROM_URL: https://netix.dl.sourceforge.net/project/superioros/ginkgo/SuperiorOS-Xcalibur-ginkgo-OFFICIAL-20201218-0449.zip
+  ROM_NAME: Generic:SuperiorOS-Xcalibur
+  FIRMWAREZIPNAME: SuperiorOS-Xcalibur-ginkgo-OFFICIAL-20201218-0449.zip
+  ZIP_NAME: SuperiorOS-Xcalibur
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/MIUI-MODS
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/SuperiorOS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
