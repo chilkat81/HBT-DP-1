@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://dl.raaj52.workers.dev/DerpFest-11-Community-Edition-OSS-Alpha-raphael-20201219-1529.zip
-  ROM_NAME: Generic:DerpFest-11-Community-Edition-OSS-Alpha
-  FIRMWAREZIPNAME: DerpFest-11-Community-Edition-OSS-Alpha-raphael-20201219-1529.zip
-  ZIP_NAME: DerpFest-11-Community-Edition-OSS-Alpha
+  ROM_URL: https://srv-store1.gofile.io/download/HnCyHV/Pavlova%20UI%202.1%20by%20%40whtisusername.zip
+  ROM_NAME: Generic:PavlovaUI-2-1
+  FIRMWAREZIPNAME: Pavlova UI 2.1 by @whtisusername.zip
+  ZIP_NAME: PavlovaUI-2-1
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/Derpfest
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/OxygenOS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
