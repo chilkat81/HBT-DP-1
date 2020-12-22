@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://srv-store1.gofile.io/download/HnCyHV/Pavlova%20UI%202.1%20by%20%40whtisusername.zip
-  ROM_NAME: Generic:PavlovaUI-2-1
-  FIRMWAREZIPNAME: Pavlova UI 2.1 by @whtisusername.zip
-  ZIP_NAME: PavlovaUI-2-1
+  ROM_URL: https://tdrive.elytra8.workers.dev/PixelOS_Plus_davinci-10.0-20201202-2005.zip
+  ROM_NAME: Pixel:PixelOS
+  FIRMWAREZIPNAME: PixelOS_Plus_davinci-10.0-20201202-2005.zip
+  ZIP_NAME: PixelOS
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/OxygenOS
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/PixelOS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
