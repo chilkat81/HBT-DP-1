@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://tdrive.elytra8.workers.dev/PixelOS_Plus_davinci-10.0-20201202-2005.zip
-  ROM_NAME: Pixel:PixelOS
-  FIRMWAREZIPNAME: PixelOS_Plus_davinci-10.0-20201202-2005.zip
-  ZIP_NAME: PixelOS
+  ROM_URL: https://bigota.d.miui.com/V12.0.1.0.QCNMIXM/miui_OLIVEGlobal_V12.0.1.0.QCNMIXM_ff1f4ba5e5_10.0.zip
+  ROM_NAME: MIUI:MIUI-12-Global_V12_0_1_0
+  FIRMWAREZIPNAME: miui_OLIVEGlobal_V12.0.1.0.QCNMIXM_ff1f4ba5e5_10.0.zip
+  ZIP_NAME: MIUI-12-Global_V12_0_1_0
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/PixelOS
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/MIUI
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
