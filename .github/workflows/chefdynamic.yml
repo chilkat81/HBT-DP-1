@@ -6,9 +6,9 @@ on:
       types: [started]
 env:
   ROM_URL: https://netix.dl.sourceforge.net/project/premios/davinci/PremiOS_Davinci_v2.3_A10.zip
-  ROM_NAME: MIUI:PremiOS_gsı_v2-3_A10_zip
+  ROM_NAME: MIUI:PremiOS_gsı_v2-3_A10
   FIRMWAREZIPNAME: PremiOS_Davinci_v2.3_A10.zip
-  ZIP_NAME: PremiOS_gsı_v2-3_A10_zip
+  ZIP_NAME: PremiOS_gsı_v2-3_A10
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
