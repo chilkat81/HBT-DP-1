@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://build.aospa.co/prerelease/ginkgo/pa-ruby-alpha-1-ginkgo-20201223.zip
-  ROM_NAME: Generic:Paranoid_Android_11_Ruby
-  FIRMWAREZIPNAME: miui_OLIVEGlobal_V12.0.1.0.QCNMIXM_ff1f4ba5e5_10.0.zip
-  ZIP_NAME: Paranoid_Android_11_Ruby
+  ROM_URL: https://netix.dl.sourceforge.net/project/premios/davinci/PremiOS_Davinci_v2.3_A10.zip
+  ROM_NAME: MIUI:PremiOS_gsı_v2-3_A10_zip
+  FIRMWAREZIPNAME: PremiOS_Davinci_v2.3_A10.zip
+  ZIP_NAME: PremiOS_gsı_v2-3_A10_zip
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/ParanoidAndroid
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/MIUI-MODS
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
