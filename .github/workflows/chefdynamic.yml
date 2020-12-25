@@ -5,14 +5,14 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://netix.dl.sourceforge.net/project/premios/davinci/PremiOS_Davinci_v2.3_A10.zip
-  ROM_NAME: MIUI:PremiOS-v2-3-A10
-  FIRMWAREZIPNAME: PremiOS_Davinci_v2.3_A10.zip
-  ZIP_NAME: PremiOS-v2-3-A10
+  ROM_URL: https://download.meizu.com/Firmware/Flyme/meizu17_Pro/8.20.12.22/cn_daily/20201222011108/bf865dd0/update.zip
+  ROM_NAME: Flyme:Flyme-8-20-12-22
+  FIRMWAREZIPNAME: cn_daily/20201222011108/bf865dd0/update.zip
+  ZIP_NAME: Flyme-8-20-12-22
   SCRIPT_NAME: sha010
   SECRETS_PASSWORD: ${{ secrets.SFGPASS }}
   TZ: Middle-East/Kuwait
-  SFDIRA1: cd /home/pfs/project/berkay-gsi/MIUI-MODS
+  SFDIRA1: cd /home/pfs/project/berkay-gsi/Flyme
   SFDIRA2: cd /home/pfs/project/berkay-gsi/berkay
   SFUSER: ${{ secrets.SFUSER }}
 
