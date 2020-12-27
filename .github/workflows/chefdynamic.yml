@@ -5,7 +5,7 @@ on:
   watch: 
       types: [started]
 env:
-  ROM_URL: https://firmware.meizu.com/Firmware/Flyme/meizu17_Pro/8.2.0.0/cn/20201215185816/2ce1c704/update.zip
+  ROM_URL: https://netix.dl.sourceforge.net/project/ancientrom/begonia/AncientOS-weeaboify-v4.0.1-Final-begonia-Koshiki-20201227-1009-GApps.zip
   ROM_NAME: Flyme:Flyme-8-2-0-0
   FIRMWAREZIPNAME: cn/20201215185816/2ce1c704/update.zip
   ZIP_NAME: Flyme-8-2-0-0
